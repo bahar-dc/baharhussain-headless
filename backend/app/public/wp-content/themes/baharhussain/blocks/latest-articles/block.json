@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ths/latest-articles",
+  "version": "1.0.0",
+  "title": "Latest Articles",
+  "category": "ths-home",
+  "icon": "align-center",
+  "description": "",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide"
+    ]
+  },
+  "attributes": {
+    "preview": {
+      "type": "boolean",
+      "default": false
+    },
+    "blockTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgWidth": {
+      "type": "string",
+      "default": "dbt-ctn-1360"
+    },
+    "marginTop": {
+      "type": "string",
+      "default": "dbt-spr-48"
+    },
+    "marginBottom": {
+      "type": "string",
+      "default": "dbt-spr-48"
+    }
+  },
+  "example": {
+    "attributes": {
+      "preview": true
+    }
+  },
+  "textdomain": "baharhussain",
+  "editorScript": "file:./index.js",
+  "render": "file:./latest-articles.php",
+  "style": "file:./latest-articles-style.css",
+  "editorStyle": "file:./latest-articles-style.css"
+}

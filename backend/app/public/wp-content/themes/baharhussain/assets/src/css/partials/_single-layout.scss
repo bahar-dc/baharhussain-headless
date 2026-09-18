@@ -1,0 +1,104 @@
+@use "./_tools" as *;
+
+.widget-columns,
+.sidebar-widget,
+.movie-detail-widget {
+	background-color: var(--bh_widget_column_bg_color);
+	color: var(--bh_widget_column_color);
+	padding: var(--bh_spr_16);
+	border-radius: var(--bh_border_radius_16);
+	box-sizing: border-box;
+}
+
+.sidebar-widget {
+	margin-bottom: 6px;
+}
+
+.widget-columns.ths-widget-column,
+.suggest-video-prompt,
+.post-card-essential,
+.warning-prompt {
+	margin-bottom: 24px;
+}
+
+@include responsive("small") {
+
+	p {
+		margin-bottom: var(--bh_spr_24);
+	}
+}
+
+.post-detail-content {
+	width: 71.5%;
+	--bh_fs_h2: var(--bh_fs_24);
+	letter-spacing: -0.01em;
+
+	h2,
+	.heading-2 {
+		margin-bottom: 16px;
+	}
+
+	p {
+		margin-bottom: 16px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	[type="checkbox"]:checked + label::after,
+	[type="checkbox"]:not(:checked) + label::after,
+	[type="checkbox"]:checked + span::after,
+	[type="checkbox"]:not(:checked) + span::after {
+		--bh_checkbox_after_bgcolor: var(--bh_black);
+		background-color: var(--bh_checkbox_after_bgcolor);
+	}
+
+	.wrapper {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.post-detail-sidebar {
+	width: 25.5%;
+}
+
+
+.heading-lists {
+
+	li {
+
+		a,
+		a:visited {
+			color: var(--bh_sdbr_link_color);
+
+			@include font(switzer, reg);
+			font-size: 16px;
+			text-transform: capitalize;
+
+			&:hover {
+				color: var(--bh_sdbr_link_hover_color);
+			}
+		}
+
+		&::before {
+			opacity: 0;
+			background-color: var(--bh_sdbr_link_active_color);
+		}
+
+		&:has(.current) {
+
+			a,
+			a:visited {
+				color: var(--bh_sdbr_link_active_color);
+
+				@include font(switzer, med);
+			}
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}

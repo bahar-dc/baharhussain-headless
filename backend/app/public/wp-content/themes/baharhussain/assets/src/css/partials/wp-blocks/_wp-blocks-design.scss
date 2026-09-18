@@ -1,0 +1,18 @@
+// Buttons
+
+.is-style-fill-boxed {
+
+	a.wp-block-button__link {
+		border-radius: inherit;
+	}
+}
+
+.is-style-outline-boxed {
+
+	a.wp-block-button__link {
+		color: var(--bh_black);
+		border-radius: inherit;
+		background-color: transparent;
+		background-image: none;
+	}
+}

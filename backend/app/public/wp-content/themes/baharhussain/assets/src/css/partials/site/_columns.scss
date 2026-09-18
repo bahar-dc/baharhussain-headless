@@ -1,0 +1,53 @@
+@use "../_tools" as *;
+
+.two-columns {
+	display: grid !important;
+
+	@include fluidColumns(2, 309px, 0.75%, 0);
+	row-gap: var(--bh_spr_20);
+}
+
+.three-columns {
+	display: grid !important;
+
+	@include fluidColumns(3, 309px, 1.4%, 0);
+	row-gap: var(--bh_spr_20);
+}
+
+.four-columns {
+	display: grid !important;
+
+	@include fluidColumns(4, 300px, 1.25%, 0);
+	row-gap: var(--bh_spr_8);
+}
+
+.col-60 {
+	width: 59.2%;
+}
+
+.col-39 {
+	width: 39%;
+}
+
+.wrapper {
+
+	.post-archive.two-columns {
+		max-width: 100%;
+	}
+}
+
+
+@include responsive("tabfull") {
+
+	.col-60,
+	.col-39 {
+		width: 100%;
+	}
+}
+
+@include responsive("small") {
+
+	.four-columns {
+		gap: 8px;
+	}
+}

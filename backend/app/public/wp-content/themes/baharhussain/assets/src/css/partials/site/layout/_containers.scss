@@ -1,0 +1,146 @@
+/****
+ *
+ * containers
+ *
+****/
+
+.wrapper {
+	max-width: 1360px;
+	width: 94.445%;
+	margin: 0 auto;
+}
+
+.dbt-ctn-1130,
+.etr-dbt-ctn-1130 {
+
+	.wrapper {
+		max-width: 1130px;
+	}
+}
+
+.dbt-ctn-1060,
+.etr-dbt-ctn-1060 {
+
+	.wrapper {
+		max-width: 1060px;
+	}
+}
+
+.dbt-ctn-915,
+.etr-dbt-ctn-915 {
+
+	.wrapper {
+		max-width: 915px;
+	}
+}
+
+.dbt-ctn-848,
+.etr-dbt-ctn-848 {
+
+	.wrapper {
+		max-width: 848px;
+	}
+}
+
+.dbt-ctn-780,
+.etr-dbt-ctn-780 {
+
+	.wrapper {
+		max-width: 780px;
+	}
+}
+
+.dbt-ctn-dft-bg,
+.etr-dbt-ctn-dft-bg {
+	background-color: var(--bh_ctn_white);
+
+	.testimonials p {
+		color: var(--bh_black);
+	}
+
+	.search-box {
+
+		form {
+			filter: invert(1);
+		}
+
+		input {
+			color: var(--bh_white);
+		}
+	}
+
+	.cat-nav ul li a,
+	.cat-nav ul li a:visited {
+		color: var(--bh_black);
+
+		&::after {
+			background-color: var(--bh_black_bg);
+		}
+	}
+
+
+}
+
+.dbt-ctn-dblue-bg,
+.etr-dbt-ctn-dblue-bg {
+	background-image: url(../images/ctn-dblue-bg.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	--bh_heading_color: var(--bh_white);
+	--bh_body_color: var(--bh_white);
+	color: var(--bh_body_color);
+
+	.post-slider-button {
+
+		svg path {
+			stroke: var(--bh_white);
+		}
+	}
+
+	.post-card {
+		border: 0 !important;
+	}
+}
+
+.dbt-ctn-gradient-with-ths,
+.etr-dbt-ctn-gradient-with-ths {
+	background-image: url(../images/ctn-gradient-with-ths.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	--bh_heading_color: var(--bh_white);
+	--bh_body_color: var(--bh_white);
+	color: var(--bh_body_color);
+
+	.post-slider-button {
+
+		svg path {
+			stroke: var(--bh_white);
+		}
+	}
+
+	.contact-form-area {
+		background: none !important;
+	}
+}
+
+.ctn-gradient-bg,
+.etr-ctn-gradient-bg {
+	background-image: url(../images/ctn-gradient-bg.webp);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+.ctn-gradient-bg-var,
+.etr-ctn-gradient-bg-var {
+	background-image: url(../images/light-gradient-2.webp);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+.background-light-blue {
+	background: radial-gradient(circle at 2px 2px,rgba(26,82,229,.08) 2px,transparent 2.5px) 0 58% /18px 18px no-repeat,linear-gradient(115deg,#f8fbff,#edf3ff 54%,#f7f9ff);
+}

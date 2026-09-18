@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<ruleset name="Bahar Hussain Theme">
+	<description>PHPCS Ruleset for THS WordPress Theme</description>
+	<!-- Check files in this directory and subdirectories. -->
+	<file>.</file>
+	<!-- Prevent sniffs of some directories and build artifacts. -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/assets/build/*</exclude-pattern>
+	<exclude-pattern>/blocks/section-container/*</exclude-pattern>
+	<!-- Webpack-generated asset manifests — not authored code. -->
+	<exclude-pattern>*.asset.php</exclude-pattern>
+
+	<arg name="parallel" value="8"/>
+	<arg value="psv"/>
+	<arg name="extensions" value="php"/>
+
+	<!-- Custom capabilities used across the theme. -->
+	<rule ref="WordPress.WP.Capabilities">
+		<properties>
+			<property name="custom_capabilities" type="array">
+				<element value="ths_super_admin"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Use WordPress-Extra as the base ruleset (WordPress-Core + best practices). -->
+	<rule ref="WordPress-Extra">
+		<exclude name="Squiz.PHP.CommentedOutCode.Found"/>
+	</rule>
+	<!-- Page templates currently use underscores for historic reasons. -->
+	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+		<exclude-pattern>page_landing.php</exclude-pattern>
+	</rule>
+	<!-- Class files follow class-*.php convention already; block render files match block slug. -->
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>/blocks/*</exclude-pattern>
+		<exclude-pattern>/assets/src/blocks/*</exclude-pattern>
+		<!-- Legacy class-wp-theme-*.php filenames — classes use shorter THS_* names. -->
+		<exclude-pattern>/includes/classes/*</exclude-pattern>
+		<exclude-pattern>/includes/schema.php</exclude-pattern>
+	</rule>
+	<!-- Verify that no WP functions are used which are deprecated or removed. -->
+	<rule ref="WordPress.WP.DeprecatedFunctions"/>
+	<!-- Check all globals have the expected prefix. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="ths_"/>
+				<element value="THS_"/>
+			</property>
+		</properties>
+		<!--
+			Block render callbacks, template partials, and page templates
+			execute at include-scope. Their local variables are not true globals
+			and do not need a theme prefix (standard WordPress theme pattern).
+		-->
+		<exclude-pattern>/assets/src/blocks/*</exclude-pattern>
+		<exclude-pattern>/blocks/*</exclude-pattern>
+		<exclude-pattern>/partials/*</exclude-pattern>
+		<exclude-pattern>/templates/*</exclude-pattern>
+		<exclude-pattern>header.php</exclude-pattern>
+		<exclude-pattern>footer.php</exclude-pattern>
+		<exclude-pattern>search.php</exclude-pattern>
+		<exclude-pattern>index.php</exclude-pattern>
+		<exclude-pattern>single.php</exclude-pattern>
+		<exclude-pattern>page.php</exclude-pattern>
+		<exclude-pattern>archive.php</exclude-pattern>
+		<exclude-pattern>404.php</exclude-pattern>
+	</rule>
+	<!-- Allow theme-specific exceptions to WordPress filename rules. -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="is_theme" value="true"/>
+		</properties>
+	</rule>
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="THS"/>
+				<element value="html_entity_decode"/>
+				<element value="html_entity_remove"/>
+				<element value="build_acf_button"/>
+				<element value="build_excerpt"/>
+				<element value="build_excerpt_nomore"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.Security.ValidatedSanitizedInput">
+		<properties>
+			<property name="customSanitizingFunctions" type="array">
+				<element value="recursive_sanitize_text_field" />
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WP">
+		<exclude name="WordPress.WP.PostsPerPage.posts_per_page_posts_per_page"/>
+		<!-- Using roles for menu capabilities is intentional in admin-menus.php. -->
+		<exclude name="WordPress.WP.Capabilities.RoleFound"/>
+	</rule>
+</ruleset>

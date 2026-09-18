@@ -1,0 +1,219 @@
+@use "./_tools" as *;
+
+.services-pricing__head {
+	max-width: 860px;
+	margin-inline: auto;
+	text-align: center;
+}
+
+.services-pricing__eyebrow {
+	justify-content: center;
+}
+
+.services-pricing__title {
+	letter-spacing: -0.03em;
+}
+
+.services-pricing__intro {
+	max-width: 760px;
+	margin-inline: auto;
+}
+
+.services-pricing__plans {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-top: var(--bh_spr_48);
+	border: 1px solid var(--bh_border);
+	border-radius: var(--bh_border_radius_16);
+}
+
+.services-pricing__plan {
+	position: relative;
+	padding: var(--bh_spr_48);
+}
+
+.services-pricing__plan + .services-pricing__plan::before {
+	content: "";
+	position: absolute;
+	top: var(--bh_spr_40);
+	bottom: var(--bh_spr_40);
+	left: 0;
+	width: 1px;
+	background: var(--bh_border);
+}
+
+.services-pricing__plan h3 {
+	margin: 0 0 var(--bh_spr_24);
+	color: var(--bh_heading_color);
+	@include font(switzer, sbold, family weight);
+	font-size: var(--bh_fs_24);
+	line-height: var(--bh_lh_140);
+}
+
+.services-pricing__starting {
+	margin: 0;
+	color: var(--bh_regular_text);
+	@include font(switzer, reg, family weight);
+	font-size: var(--bh_fs_18);
+	line-height: var(--bh_lh_160);
+}
+
+.services-pricing__price {
+	margin: var(--bh_spr_12) 0 0;
+	color: var(--bh_main_color);
+	@include font(wsans, bold, family weight);
+	font-size: clamp(30px, 3.5vw, 48px);
+	letter-spacing: -0.035em;
+	line-height: var(--bh_lh_120);
+}
+
+.services-pricing__checklist {
+	display: grid;
+	gap: var(--bh_spr_16);
+	margin: var(--bh_spr_24) 0 0;
+	padding: var(--bh_spr_24) 0 0;
+	list-style: none;
+	border-top: 1px solid var(--bh_border);
+}
+
+.services-pricing__checklist li {
+	display: flex;
+	align-items: center;
+	gap: var(--bh_spr_12);
+	margin: 0;
+	color: var(--bh_regular_text);
+	@include font(switzer, reg, family weight);
+	font-size: var(--bh_fs_16);
+	line-height: var(--bh_lh_160);
+}
+
+.services-pricing__checklist span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 35px;
+	width: 35px;
+	height: 35px;
+	color: var(--bh_main_color);
+	background: var(--bh_color_light_blue);
+	border-radius: 50%;
+}
+
+.services-pricing__checklist svg {
+	width: 23px;
+	height: 23px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.services-pricing__note {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--bh_spr_32);
+	max-width: 1100px;
+	margin: var(--bh_spr_32) auto 0;
+	padding: var(--bh_spr_24) var(--bh_spr_40);
+	color: var(--bh_regular_text);
+	background: var(--bh_lgrey_bg);
+	border: 1px solid var(--bh_border);
+	border-radius: var(--bh_border_radius_12);
+}
+
+.services-pricing__note p {
+	max-width: 850px;
+	margin: 0;
+	text-align: center;
+	@include font(switzer, reg, family weight);
+	font-size: var(--bh_fs_20);
+	line-height: var(--bh_lh_160);
+}
+
+.services-pricing__note-icon,
+.services-pricing__note-icon svg {
+	flex: 0 0 44px;
+	width: 44px;
+	height: 44px;
+}
+
+.services-pricing__note-icon {
+	color: var(--bh_main_color);
+}
+
+.services-pricing__note-icon svg {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.services-pricing__action {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--bh_spr_16);
+	margin-top: var(--bh_spr_32);
+}
+
+.services-pricing__action .button {
+	gap: var(--bh_spr_16);
+}
+
+.services-pricing__action svg {
+	width: 22px;
+	height: 22px;
+}
+
+@include responsive("tabfull") {
+
+	.services-pricing__plan {
+		padding: var(--bh_spr_40) var(--bh_spr_32);
+	}
+}
+
+@include responsive("small") {
+
+	.services-pricing__plans {
+		grid-template-columns: 1fr;
+		margin-top: var(--bh_spr_40);
+	}
+
+	.services-pricing__plan {
+		padding: var(--bh_spr_32) var(--bh_spr_24);
+	}
+
+	.services-pricing__plan + .services-pricing__plan::before {
+		top: 0;
+		right: var(--bh_spr_24);
+		bottom: auto;
+		left: var(--bh_spr_24);
+		width: auto;
+		height: 1px;
+	}
+
+	.services-pricing__price {
+		font-size: 31px;
+	}
+
+	.services-pricing__checklist {
+		padding-top: 0;
+		border-top: 0;
+	}
+
+	.services-pricing__note {
+		align-items: flex-start;
+		padding: var(--bh_spr_20);
+	}
+
+	.services-pricing__note p {
+		font-size: var(--bh_fs_16);
+	}
+
+	.services-pricing__action .button {
+		width: 100%;
+	}
+}

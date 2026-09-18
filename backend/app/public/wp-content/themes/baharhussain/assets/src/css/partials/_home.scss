@@ -1,0 +1,55 @@
+@use "./_tools" as *;
+
+.home-template {
+	background-color: var(--bh_white);
+}
+
+.home-section-head {
+	max-width: 60%;
+	margin-bottom: var(--bh_spr_48);
+}
+
+.home-section-head__eyebrow {
+	font-size: var(--bh_fs_eyebrow);
+}
+
+.home-section-head__title {
+	margin: 0 0 var(--bh_spr_24);
+	color: var(--bh_heading_color);
+	@include font(wsans, bold, family weight);
+	font-size: var(--bh_fs_48);
+	line-height: var(--bh_lh_h1);
+}
+
+.home-section-head__text {
+	margin: 0;
+	color: var(--bh_regular_text);
+	@include font(switzer, reg, family weight);
+	font-size: var(--bh_fs_section_text);
+	line-height: var(--bh_lh_160);
+}
+
+@include responsive("tabfull") {
+
+	.home-section-head {
+		max-width: 70%;
+	}
+}
+
+@include responsive("small") {
+
+	.home-section-head {
+		max-width: 100%;
+		margin-bottom: var(--bh_spr_40);
+	}
+}
+
+@import "./home/hero";
+@import "./home/stats";
+@import "./home/services";
+@import "./home/projects";
+@import "./home/why";
+@import "./home/process";
+@import "./home/standards";
+@import "./home/testimonials";
+@import "./home/cta";

@@ -1,0 +1,92 @@
+@use "./_tools" as *;
+
+.tag-1 {
+	color: var(--bh_tag_text_1);
+	background-color: var(--bh_tag_bg_1);
+}
+
+.tag-2 {
+	color: var(--bh_tag_text_2);
+	background-color: var(--bh_tag_bg_2);
+}
+
+.tag-3 {
+	color: var(--bh_tag_text_3);
+	background-color: var(--bh_tag_bg_3);
+}
+
+.tag-4 {
+	color: var(--bh_tag_text_4);
+	background-color: var(--bh_tag_bg_4);
+}
+
+.tag-5 {
+	color: var(--bh_tag_text_5);
+	background-color: var(--bh_tag_bg_5);
+}
+
+.tag-6 {
+	color: var(--bh_tag_text_6);
+	background-color: var(--bh_tag_bg_6);
+}
+
+.tag-7 {
+	color: var(--bh_tag_text_7);
+	background-color: var(--bh_tag_bg_7);
+}
+
+.tag-8 {
+	color: var(--bh_tag_text_8);
+	background-color: var(--bh_tag_bg_8);
+}
+
+.tag-9 {
+	color: var(--bh_tag_text_9);
+	background-color: var(--bh_tag_bg_9);
+}
+
+.tag-10 {
+	color: var(--bh_tag_text_10);
+	background-color: var(--bh_tag_bg_10);
+}
+
+.tag-11 {
+	color: var(--bh_tag_text_11);
+	background-color: var(--bh_tag_bg_11);
+}
+
+.tag-12 {
+	color: var(--bh_tag_text_12);
+	background-color: var(--bh_tag_bg_12);
+}
+
+
+.post-card-tags {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+	height: 26px;
+	overflow: hidden;
+
+	.post-card-tags-item {
+
+		@include font(switzer, reg);
+		font-size: var(--bh_fs_12);
+		line-height: var(--bh_lh_120);
+		border-radius: var(--bh_border_radius_8);
+		overflow: hidden;
+
+		a,
+		a:visited {
+			padding: var(--bh_spr_6) var(--bh_spr_10);
+			display: inline-block;
+			color: inherit;
+
+			@include font(switzer, reg);
+
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ths/why-ths-child",
+	"version": "1.0.0",
+	"title": "Why THS",
+	"category": "ths-pages",
+	"icon": "align-center",
+	"parent": [
+		"ths/hero-advertise"
+	],
+	"description": "",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide"
+			]
+	},
+	"attributes": {
+		"preview": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true
+		}
+	},
+	"textdomain": "baharhussain",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./why-ths-child.css",
+	"style": "file:./why-ths-child.css"
+}

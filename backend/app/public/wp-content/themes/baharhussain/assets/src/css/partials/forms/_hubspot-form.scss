@@ -1,0 +1,93 @@
+/* -------------------------------------------------
+>> Project Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+.hs-form {
+	text-align: left;
+
+	fieldset {
+		margin: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			margin: 0;
+			padding-left: 0;
+
+			label {
+				margin: 0;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	ul.hs-error-msgs {
+
+		li {
+			padding-left: 0;
+			color: var(--bh_hubspot_error_label_color);
+			font-size: var(--bh_fs_16);
+			margin: calc(var(--bh_spr_18) * -1) 0 var(--bh_spr_16);
+		}
+	}
+
+	.error {
+		text-align: left;
+	}
+
+	.hs-fieldtype-checkbox,
+	.hs-fieldtype-booleancheckbox,
+	.hs-fieldtype-radio {
+
+		ul.hs-error-msgs {
+
+			li {
+				margin: calc(var(--bh_spr_6) * -1) 0 var(--bh_spr_8);
+			}
+		}
+	}
+
+	.hs_error_rollup {
+
+		ul {
+
+			li {
+				background-color: var(--bh_valiation_error_bg_color);
+				margin: var(--bh_spr_10) 0 var(--bh_spr_30);
+				padding: var(--bh_spr_8) var(--bh_spr_16);
+				font-weight: 700;
+				font-size: 105%;
+			}
+		}
+	}
+
+	.hs-form-required {
+		color: var(--bh_hubspot_required_color);
+	}
+}
+
+.hs-form-field {
+	position: relative;
+}
+
+.form-columns-2 {
+
+	.hs-form-field {
+		display: inline-block;
+		width: 49%;
+		margin-right: calc(2% - 5px);
+
+		&:nth-child(2n + 2) {
+			margin-right: 0;
+		}
+	}
+}

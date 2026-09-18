@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ths/why-ths",
+  "version": "1.0.0",
+  "title": "Why THS",
+  "category": "ths-pages",
+  "icon": "align-center",
+  "description": "",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide"
+    ]
+  },
+  "attributes": {
+    "preview": {
+      "type": "boolean",
+      "default": false
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgWidth": {
+      "type": "string",
+      "default": "dbt-ctn-1130"
+    },
+    "marginTop": {
+      "type": "string",
+      "default": "dbt-spr-80"
+    },
+    "marginBottom": {
+      "type": "string",
+      "default": "dbt-spr-80"
+    }
+  },
+  "example": {
+    "attributes": {
+      "preview": true
+    }
+  },
+  "textdomain": "baharhussain",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./why-ths-editor-style.css",
+  "style": "file:./why-ths-style.css"
+}

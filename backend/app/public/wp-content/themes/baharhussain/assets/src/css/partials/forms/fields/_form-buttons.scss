@@ -1,0 +1,97 @@
+@use "../../_tools" as *;
+
+/* -------------------------------------------------
+>> Project Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+input[type="submit"],
+button:not(.components-button),
+input[type="button"],
+input[type="reset"],
+a.comment-reply-link {
+	appearance: button;
+	position: relative;
+	// padding: 0 var(--bh_spr_24);
+	// display: inline-block;
+	line-height: 52px;
+	box-sizing: border-box;
+	color: var(--bh_form_button_color);
+	background-color: var(--bh_form_button_bgcolor);
+	border: 1px solid var(--bh_form_button_border_color);
+	font-size: var(--bh_fs_14);
+	outline: none;
+	cursor: pointer;
+	margin: 0;
+	z-index: 2;
+
+	@include font(switzer, med);
+	border-radius: 100px;
+}
+
+button.no-button-style {
+	height: auto;
+	padding: 0;
+	background-color: transparent;
+	border-radius: auto;
+	border: 0;
+	outline: 0;
+	color: inherit;
+	line-height: 1;
+
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+@media screen and (hover: hover) {
+
+	input[type="submit"]:hover,
+	input[type="submit"]:focus-visible,
+	button:not(.components-button):hover,
+	button:not(.components-button):focus-visible,
+	input[type="button"]:hover,
+	input[type="button"]:focus-visible,
+	a.comment-reply-link:hover {
+		color: var(--bh_form_button_color_hover);
+		background-color: var(--bh_form_button_bgcolor_hover);
+		border-color: var(--bh_form_button_border_color_hover);
+	}
+}
+
+input[type="reset"] {
+	color: var(--bh_reset_button_color);
+	background-color: var(--bh_reset_button_bgcolor);
+	border: solid 3px var(--bh_reset_button_border_color);
+
+	@media screen and (hover: hover) {
+
+		&:hover,
+		&:focus-visible {
+			color: var(--bh_reset_button_color_hover);
+			background-color: var(--bh_reset_button_bgcolor_hover);
+			border: solid 3px var(--bh_reset_button_border_color_hover);
+		}
+	}
+}
+
+::-webkit-file-upload-button {
+	appearance: button;
+	font: inherit;
+}

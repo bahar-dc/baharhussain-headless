@@ -1,0 +1,26 @@
+
+@use "./_tools" as *;
+
+.categories-with-search-area .search-right-column {
+	gap: 4px;
+
+	form.search-form {
+		flex: 1 1 auto;
+
+		label {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	form.search-form,
+	label,
+	input {
+		margin-bottom: 0;
+	}
+
+	.search-submit {
+		position: absolute;
+		left: -200vw;
+	}
+}

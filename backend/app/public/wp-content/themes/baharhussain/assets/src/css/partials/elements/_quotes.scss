@@ -1,0 +1,136 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote {
+	position: relative;
+	color: var(--bh_blockquote_color);
+	font-size: var(--bh_fs_18);
+	padding: var(--bh_spr_24);
+	padding-left: var(--bh_spr_80);
+	margin: 0 0 var(--bh_spr_24);
+	background-color: var(--bh_blockquote_bg_color);
+	border-radius: var(--bh_border_radius_16);
+
+	@include font(wsans, reg);
+	background-image: url(../images/quote-icon.svg);
+	background-repeat: no-repeat;
+	background-size: 32px;
+	background-position: top 24px left 24px;
+
+	p {
+		margin-bottom: var(--bh_spr_48);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.wp-block-quote {
+
+	p {
+		margin-top: 0;
+	}
+
+	&.has-text-align-right {
+		border-left: none;
+		border-right: 3px solid var(--bh_blockquote_border_color);
+		padding: var(--bh_spr_6) var(--bh_spr_20) var(--bh_spr_6) 0;
+
+		&.is-style-plain {
+			border-right: none;
+		}
+	}
+
+	&.has-text-align-left.is-style-plain {
+		border-left: none;
+		padding: 0;
+	}
+
+	&.has-text-align-center {
+		border-left: none;
+		padding: var(--bh_spr_20) var(--bh_spr_6);
+	}
+
+	&.is-style-plain {
+		border-left: none;
+	}
+
+	&.is-style-large {
+		border-left: 0;
+	}
+}
+
+figure.wp-block-pullquote {
+	border: 0;
+	padding: 0 0 0 var(--bh_spr_64);
+	text-align: left;
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 40px;
+		height: 40px;
+		background-image: url(../images/quote-icon.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	blockquote {
+		border-left: none;
+		margin-bottom: 0;
+		padding: 0;
+		font-size: var(--bh_fs_32);
+	}
+
+	cite {
+
+		@include font(switzer, reg);
+		text-transform: initial;
+	}
+
+	&.alignleft,
+	&.alignright {
+		padding: var(--bh_spr_24) var(--bh_spr_10);
+	}
+}
+
+
+q {
+	quotes: "\201C" "\201D";
+	color: var(--bh_quote_color);
+	position: relative;
+}
+
+cite {
+	display: block;
+	margin-top: var(--bh_spr_16);
+	font-size: 80%;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: var(--bh_blockqoute_cite_color);
+	font-family: "IBM Plex Mono", monospace;
+	font-style: italic;
+	position: relative;
+
+	&::before {
+		content: "- ";
+		display: inline-block;
+		top: -11px;
+	}
+}

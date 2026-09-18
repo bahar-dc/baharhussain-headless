@@ -1,0 +1,205 @@
+{
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"useRootPaddingAwareAlignments": true,
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+		"color": {
+			"custom": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"customGradient": false,
+			"customDuotone": false,
+
+				"palette": [
+					{
+						"slug": "main-blue",
+						"color": "var(--bh_color_main_blue)",
+						"name": "Main Blue"
+					},
+				{
+					"slug": "dark-blue",
+					"color": "var(--bh_color_dark_blue)",
+					"name": "Dark Blue"
+				},
+				{
+					"slug": "light-blue",
+					"color": "var(--bh_color_light_blue)",
+					"name": "Light Blue"
+				},
+				{
+					"slug": "background",
+					"color": "var(--bh_color_neutral_background)",
+					"name": "Background"
+				},
+				{
+					"slug": "white",
+					"color": "var(--bh_color_neutral_white)",
+					"name": "White"
+				},
+				{
+					"slug": "border",
+					"color": "var(--bh_color_neutral_border)",
+					"name": "Border"
+				},
+				{
+					"slug": "heading",
+					"color": "var(--bh_color_text_heading)",
+					"name": "Heading"
+				},
+				{
+					"slug": "body-text",
+					"color": "var(--bh_color_text_body)",
+					"name": "Body Text"
+				},
+				{
+					"slug": "muted-text",
+					"color": "var(--bh_color_text_muted)",
+					"name": "Muted Text"
+				},
+				{
+					"slug": "dark-surface",
+					"color": "var(--bh_color_surface_dark)",
+					"name": "Dark Surface"
+				},
+				{
+					"slug": "danger",
+					"color": "var(--bh_signal_red_text)",
+					"name": "Danger"
+				},
+				{
+					"slug": "success",
+					"color": "var(--bh_signal_green_text)",
+					"name": "Success"
+				},
+				{
+					"slug": "warning",
+					"color": "var(--bh_signal_yellow_text)",
+					"name": "Warning"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "972px",
+			"wideSize": "1360px"
+		},
+			"spacing": {
+				"margin": false,
+				"padding": false,
+				"customSpacingSize": true,
+				"spacingSizes": [
+					{
+						"name": "8 Pixels",
+						"size": "var(--bh_spr_8)",
+						"slug": "8-pixels"
+					},
+					{
+						"name": "16 Pixels",
+						"size": "var(--bh_spr_16)",
+						"slug": "16-pixels"
+					},
+					{
+						"name": "24 Pixels",
+						"size": "var(--bh_spr_24)",
+						"slug": "24-pixels"
+					},
+					{
+						"name": "32 Pixels",
+						"size": "var(--bh_spr_32)",
+						"slug": "32-pixels"
+					},
+					{
+						"name": "48 Pixels",
+						"size": "var(--bh_spr_48)",
+						"slug": "48-pixels"
+					},
+					{
+						"name": "64 Pixels",
+						"size": "var(--bh_spr_64)",
+						"slug": "64-pixels"
+					},
+					{
+						"name": "80 Pixels",
+						"size": "var(--bh_spr_80)",
+						"slug": "80-pixels"
+					},
+					{
+						"name": "96 Pixels",
+						"size": "var(--bh_spr_96)",
+						"slug": "96-pixels"
+					}
+				],
+				"defaultSpacingSizes": false
+			},
+		"typography": {
+			"customFontSize": true,
+			"defaultFontSizes": false,
+			"fontStyle": false,
+			"default": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"dropCap": false,
+			"fontFamilies": [],
+			"fontSizes": [
+					{
+						"name": "14 - Pixels",
+						"size": "var(--bh_fs_14)",
+						"slug": "14-pixels",
+						"default": true
+					},
+					{
+						"name": "16 Pixels",
+						"size": "var(--bh_fs_16)",
+						"slug": "16-pixels"
+					},
+					{
+						"name": "18 - Pixels",
+						"size": "var(--bh_fs_18)",
+						"slug": "18-pixels"
+					},
+					{
+						"name": "20 - Pixels",
+						"size": "var(--bh_fs_20)",
+						"slug": "20-pixels"
+					},
+					{
+						"name": "24 - Pixels",
+						"size": "var(--bh_fs_24)",
+						"slug": "24-pixels"
+					},
+					{
+						"name": "32 - Pixels",
+						"size": "var(--bh_fs_32)",
+						"slug": "32-pixels"
+					},
+					{
+						"name": "40 - Pixels",
+						"size": "var(--bh_fs_40)",
+						"slug": "40-pixels"
+					},
+					{
+						"name": "48 - Pixels",
+						"size": "var(--bh_fs_48)",
+						"slug": "48-pixels"
+					}
+			]
+		}
+	},
+		"styles": {
+			"spacing": {
+				"blockGap": "var(--bh_spr_24)"
+			},
+			"typography": {
+				"fontSize": "var(--bh_fs_16)"
+			}
+		}
+	}

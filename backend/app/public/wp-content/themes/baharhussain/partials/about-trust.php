@@ -1,0 +1,46 @@
+<?php
+/**
+ * About page personal trust section.
+ *
+ * @package Bahar Hussain Theme
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+$about_trust_image_url = ! empty( $args['image_url'] ) ? $args['image_url'] : get_template_directory_uri() . '/assets/build/images/uploads/baharhussain-profile-black-shirt-2.png';
+?>
+
+<section class="site-section about-trust" aria-labelledby="about-trust-title">
+	<div class="wrapper">
+		<div class="about-trust__grid">
+			<div class="about-trust__content">
+				<p class="section-eyebrow"><?php esc_html_e( 'Personal Values', 'baharhussain' ); ?></p>
+				<h2 id="about-trust-title" class="about-trust__title"><?php esc_html_e( 'The Person Behind the Work', 'baharhussain' ); ?></h2>
+				<p class="about-trust__intro"><?php esc_html_e( 'I care about doing good work, being honest about what a project needs, and making the development process easier for everyone involved.', 'baharhussain' ); ?></p>
+				<ul class="about-trust__values">
+					<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4V4Z"></path><path d="M8 10h.01M12 10h.01M16 10h.01"></path></svg></span><span><strong><?php esc_html_e( 'Honest Communication', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I share clear updates, explain issues simply, and speak openly when something needs attention.', 'baharhussain' ); ?></small></span></li>
+					<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.4-3.1 7.5-8 9-4.9-1.5-8-4.6-8-9V6l8-3Z"></path><path d="m9 12 2 2 4-5"></path></svg></span><span><strong><?php esc_html_e( 'Trusted and Consistent', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I stay organized, respect deadlines, and give every project steady attention.', 'baharhussain' ); ?></small></span></li>
+					<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 4.5h5a4 4 0 0 1 4 4V21a4 4 0 0 0-4-4H3V4.5Z"></path><path d="M21 4.5h-5a4 4 0 0 0-4 4V21a4 4 0 0 1 4-4h5V4.5Z"></path></svg></span><span><strong><?php esc_html_e( 'Always Learning', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I keep improving my WordPress skills and stay open to better tools and ways of working.', 'baharhussain' ); ?></small></span></li>
+					<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"></path></svg></span><span><strong><?php esc_html_e( 'Care and Ownership', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I take responsibility for my work and give every detail the attention it deserves.', 'baharhussain' ); ?></small></span></li>
+				</ul>
+			</div>
+
+			<div class="about-trust__portrait">
+				<img src="<?php echo esc_url( $about_trust_image_url ); ?>" alt="<?php esc_attr_e( 'Bahar Hussain at work', 'baharhussain' ); ?>" width="1024" height="1536" loading="lazy" decoding="async">
+			</div>
+
+			<ul class="about-trust__details">
+				<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg></span><span><strong><?php esc_html_e( 'Who I Am', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'A WordPress developer who enjoys solving problems and building practical solutions.', 'baharhussain' ); ?></small></span></li>
+				<li><span class="about-trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span><span><strong><?php esc_html_e( 'Based In', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'Lahore, Pakistan', 'baharhussain' ); ?></small></span></li>
+				<li><span class="about-trust__icon" aria-hidden="true"><svg class="about-trust__icon-svg--filled about-trust__icon-svg--bold" viewBox="-4.93 0 122.88 122.88"><path d="M44.13 102.06c-1.14.03-2.14-.81-2.3-1.96-.17-1.2.64-2.31 1.82-2.54-1.3-7.37-4.85-11.43-8.6-15.72-2.92-3.34-5.95-6.81-8.34-11.92-2.35-5.03-3.64-10.23-3.6-15.63.05-5.4 1.42-10.96 4.4-16.71l.06-.11c3.91-6.62 9.38-11.04 15.47-13.52 5.11-2.09 10.66-2.8 16.1-2.3 5.42.5 10.73 2.2 15.37 4.94 5.9 3.49 10.75 8.67 13.42 15.21 1.44 3.54 2.42 7.49 2.54 11.82.12 4.31-.62 8.96-2.61 13.88-2.66 6.59-6.18 10.68-9.47 14.51-3.03 3.53-5.85 6.81-7.42 11.84.89.21 1.59.94 1.73 1.9.17 1.24-.7 2.39-1.94 2.56l-.77.11c-.14 1.09-.23 2.26-.27 3.51l.25-.04c1.24-.17 2.39.7 2.56 1.94.17 1.24-.7 2.39-1.94 2.56l-.78.11.03 3.44.13-.02c1.25-.15 2.38.74 2.54 1.98.15 1.25-.74 2.38-1.98 2.54l-1.68.21c-1.2 3.11-3.34 5.48-5.87 6.94-1.74 1.01-3.67 1.59-5.61 1.71-1.97.12-3.96-.25-5.78-1.13-2.08-1.02-3.94-2.71-5.29-5.14-.65-.33-1.13-.97-1.23-1.75-.04-.31-.01-.61.07-.89-.39-1.16-.68-2.43-.87-3.83l-.07.01c-1.24.17-2.39-.7-2.56-1.94-.17-1.24.7-2.39 1.94-2.56l.54-.08c.04-1.22.03-2.38-.02-3.48ZM2.18 58.86C1.01 58.89.04 57.98 0 56.81c-.04-1.17.88-2.14 2.05-2.18l8.7-.3c1.17-.04 2.14.88 2.18 2.05.04 1.17-.88 2.14-2.05 2.18l-8.7.3Zm108.5-8.61c1.16-.12 2.2.73 2.32 1.89.12 1.16-.73 2.2-1.89 2.32l-8.66.91c-1.16.12-2.2-.73-2.32-1.89-.12-1.16.73-2.2 1.89-2.32l8.66-.91ZM94.91 14.78c.65-.97 1.96-1.23 2.93-.58.97.65 1.23 1.96.58 2.93l-4.84 7.24c-.65.97-1.96 1.23-2.93.58-.97-.65-1.23-1.96-.58-2.93l4.84-7.24ZM57.63 2.06C57.66.89 58.63-.03 59.79 0c1.17.03 2.09 1 2.06 2.16l-.22 8.7c-.03 1.17-1 2.09-2.16 2.06-1.17-.03-2.09-1-2.06-2.16l.22-8.7ZM13.88 15.53c-.86-.8-.9-2.14-.11-2.99.8-.86 2.14-.9 2.99-.11l6.37 5.94c.86.8.9 2.14.11 2.99-.8.86-2.14.9-2.99.11l-6.37-5.94Zm34 81.42 18.49-2.63c1.59-6.7 5.05-10.73 8.8-15.08 3.08-3.58 6.36-7.4 8.76-13.34 1.76-4.35 2.41-8.43 2.31-12.19-.1-3.75-.96-7.21-2.24-10.34-2.3-5.63-6.51-10.11-11.65-13.15-4.11-2.43-8.8-3.94-13.59-4.37-4.77-.44-9.64.19-14.13 2.02-5.26 2.15-9.99 5.97-13.39 11.72-2.64 5.12-3.86 10.02-3.9 14.73-.04 4.74 1.11 9.33 3.2 13.8 2.13 4.56 4.97 7.8 7.69 10.92 4.23 4.86 8.24 9.45 9.64 17.91Zm17.74 2.07-17.27 2.45c.05 1.1.07 2.25.05 3.47l17.05-2.42c.02-1.23.07-2.4.17-3.5Zm-17.13 10.5c.12.92.3 1.76.53 2.54l16.55-2.04c.11-.86.13-1.77.05-2.74l-.01-.19-17.12 2.43Zm2.88 6.84c.64.67 1.35 1.19 2.1 1.55 1.15.56 2.42.79 3.67.72 1.29-.08 2.57-.47 3.74-1.15 1.1-.64 2.09-1.53 2.88-2.65l-12.39 1.53Z"></path></svg></span><span><strong><?php esc_html_e( 'What Drives Me', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'Learning, improving, and creating work that helps clients move forward toward growth.', 'baharhussain' ); ?></small></span></li>
+				<li><span class="about-trust__icon" aria-hidden="true"><svg class="about-trust__icon-svg--filled" viewBox="0 -1.5 20 20"><path d="M16.18 0H3.819L0 5.978 10 17 20 5.765 16.18 0Zm-1.085 1.965 2.403 3.626-7.513 8.44-7.493-8.258 2.433-3.808H15.095Z"></path></svg></span><span><strong><?php esc_html_e( 'What I Value', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'Honesty, clear communication, steady progress, and quality work.', 'baharhussain' ); ?></small></span></li>
+				<li class="about-trust__quote"><blockquote><p><?php esc_html_e( 'For me, good development is not only about code. It is also about understanding the goal and making the process easier.', 'baharhussain' ); ?></p></blockquote></li>
+			</ul>
+		</div>
+
+		<div class="about-trust__commitment" style="display: none;">
+			<div class="about-trust__commitment-heading"><span class="about-trust__commitment-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 4.4-3.1 7.5-8 9-4.9-1.5-8-4.6-8-9V6l8-3Z"></path><path d="m9 12 2 2 4-5"></path></svg></span><span><strong><?php esc_html_e( 'You Can Count On Me.', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I’m committed to your goals and work with the same dedication as if it were my own business.', 'baharhussain' ); ?></small></span></div>
+			<ul><li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><strong><?php esc_html_e( 'On-Time Delivery', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I respect your time and always deliver on schedule.', 'baharhussain' ); ?></small></span></li><li><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"></path><path d="M8 10h.01M12 10h.01M16 10h.01"></path></svg><span><strong><?php esc_html_e( 'Clear Communication', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'You’ll always know what’s happening with your project.', 'baharhussain' ); ?></small></span></li><li><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path><path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg><span><strong><?php esc_html_e( 'Problem Solver', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'I find the right solution and make things happen.', 'baharhussain' ); ?></small></span></li><li><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><span><strong><?php esc_html_e( 'Confidential & Secure', 'baharhussain' ); ?></strong><small><?php esc_html_e( 'Your project and data are always safe with me.', 'baharhussain' ); ?></small></span></li></ul>
+		</div>
+	</div>
+</section>

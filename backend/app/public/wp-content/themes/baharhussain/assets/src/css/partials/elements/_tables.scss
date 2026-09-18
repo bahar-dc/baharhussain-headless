@@ -1,0 +1,162 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 var(--bh_spr_24);
+	width: 100%;
+	table-layout: fixed;
+	text-align: left;
+	box-sizing: border-box;
+
+	p {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	caption {
+		color: var(--bh_caption_color);
+		font-size: 90%;
+		margin: 0 0 var(--bh_spr_20);
+	}
+}
+
+tr,
+tbody tr {
+	border-bottom: 1px solid var(--bh_table_border_color);
+
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+td,
+th {
+	padding: var(--bh_spr_10) var(--bh_spr_16);
+	vertical-align: middle;
+	font-size: var(--bh_fs_16);
+}
+
+thead {
+
+	tr {
+		border: none;
+	}
+
+	th {
+		text-transform: uppercase;
+	}
+}
+
+.wp-block-table td,
+.wp-block-table th {
+
+	@include font(switzer, reg);
+	vertical-align: top;
+	color: var(--bh_black);
+}
+
+.wp-block-table td {
+	padding: var(--bh_spr_16) var(--bh_spr_24) !important;
+}
+
+.wp-block-table th {
+	padding: var(--bh_spr_24) !important;
+	border: 1px solid var(--bh_table_border_color) !important;
+	border-top: 0 !important;
+	font-size: var(--bh_fs_16);
+}
+
+tfoot {
+
+	tr {
+		border: none;
+	}
+
+	tr:first-child {
+		border-top: 1px solid var(--bh_table_foot_border_color);
+	}
+
+	td {
+		font-weight: 700;
+	}
+}
+
+
+.wp-block-table {
+	background-color: var(--bh_table_bg_color);
+	border-radius: var(--bh_border_radius_16);
+	overflow: hidden;
+
+	thead {
+		border-bottom: 0 !important;
+	}
+
+	thead,
+	tbody,
+	tfoot {
+
+		tr > th:nth-child(1),
+		tr > td:nth-child(1) {
+			border-left: 0 !important;
+		}
+
+		tr > th:last-child,
+		tr > td:last-child {
+			border-right: 0 !important;
+		}
+	}
+
+	tbody td {
+		border: 1px solid var(--bh_table_border_color);
+		font-size: var(--bh_fs_16);
+	}
+
+	tbody tr td strong {
+
+		@include font(switzer, sbold);
+	}
+
+	tbody {
+
+		tr:last-of-type > td {
+			border-bottom: 0 !important;
+		}
+	}
+
+	tfoot {
+		border-top: 0;
+
+		tr:first-child {
+			border-top: 0 !important;
+		}
+
+		tr td {
+			border-color: var(--bh_table_border_color);
+			border-bottom: 0;
+		}
+	}
+
+	&.is-style-stripes {
+
+		tbody tr:nth-child(odd) {
+			background-color: #fff;
+		}
+
+		tfoot {
+
+			tr {
+				border-top: 3px solid var(--bh_table_head_border_color);
+			}
+		}
+	}
+
+}

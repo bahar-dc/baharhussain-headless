@@ -1,0 +1,21 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+body {
+	@include font(inter, reg, family weight);
+	position: relative;
+	font-size: var(--bh_fs_body_base);
+	color: var(--bh_body_color);
+	line-height: var(--bh_lh_body_base);
+	 
+}
+
+::selection {
+	color: var(--bh_selection_color);
+	background-color: var(--bh_selection_bgcolor);
+}

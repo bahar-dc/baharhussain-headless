@@ -1,0 +1,37 @@
+/****
+ *
+ * breadcrumbs
+ *
+****/
+
+.breadcrumbs-section {
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: var(--bh_spr_16) 0;
+}
+
+#breadcrumbs {
+	color: var(--bh_breadcrumbs_color);
+	max-width: 1840px;
+	width: 97%;
+	margin: 0 auto;
+
+	span.breadcrumb_last {
+		font-weight: 500;
+		margin-left: var(--bh_spr_10);
+	}
+
+	a,
+	&:visited {
+		color: var(--bh_breadcrumbs_link_color);
+		font-weight: 700;
+		margin: 0 var(--bh_spr_10) 0 0;
+
+		&:hover {
+			color: var(--bh_breadcrumbs_link_hover_color);
+		}
+	}
+}

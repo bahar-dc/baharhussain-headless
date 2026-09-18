@@ -1,0 +1,147 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+i,
+em,
+var,
+address,
+dfn {
+	font-style: italic;
+}
+
+code,
+pre,
+kbd,
+tt,
+var,
+samp {
+	font-family: monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted var(--bh_abbr_border_color);
+	color: var(--bh_abbr_color);
+	text-decoration: none;
+	cursor: help;
+}
+
+abbr[title] {
+	text-decoration: none;
+}
+
+address {
+	margin: 0 0 var(--bh_spr_30);
+}
+
+mark {
+	background-color: var(--bh_mark_bgcolor);
+	color: var(--bh_mark_color);
+	padding: var(--bh_spr_4) var(--bh_spr_8);
+}
+
+small {
+	font-size: 80%;
+}
+
+big {
+	font-size: 125%;
+}
+
+.section-eyebrow {
+	margin: 0 0 var(--bh_spr_24);
+	color: var(--bh_main_color);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+
+	@include font(switzer, bold, family weight);
+	font-size: var(--bh_fs_16);
+	line-height: var(--bh_lh_120);
+}
+
+s,
+strike,
+del {
+	text-decoration: line-through;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+u {
+	border-bottom: 1px solid var(--bh_underline_border_color);
+	text-decoration: none;
+}
+
+del {
+	color: var(--bh_delete_color);
+}
+
+ins {
+	color: var(--bh_insert_color);
+	border-bottom: 1px solid var(--bh_insert_border_color);
+	text-decoration: none;
+}
+
+sub,
+sup {
+	font-size: 70%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -4px;
+}
+
+sup {
+	top: -8px;
+}
+
+code,
+pre,
+kbd,
+tt {
+	max-width: 100%;
+	overflow: auto;
+	margin: 0 0 var(--bh_spr_30);
+}
+
+code,
+kbd,
+tt {
+	color: var(--bh_code_color);
+	background-color: var(--bh_code_bgcolor);
+	padding: var(--bh_spr_4) var(--bh_spr_8);
+}
+
+pre {
+	color: var(--bh_pre_color);
+	background-color: var(--bh_pre_bgcolor);
+	padding: var(--bh_spr_20) var(--bh_spr_24);
+	overflow-x: scroll;
+}
+
+hr {
+	background-color: var(--bh_hr_bgcolor);
+	border: 0;
+	height: 1px;
+	margin-bottom: var(--bh_spr_30);
+}
+
+audio,
+video {
+	margin-bottom: var(--bh_spr_30);
+	width: 100%;
+}
+
+hr.wp-block-separator {
+	border: none;
+	border-top: 1px solid var(--bh_hr_bgcolor);
+}

@@ -1,0 +1,20 @@
+{
+	"name": "baharhussain/theme",
+	"description": "Bahar Hussain — WordPress Theme",
+	"version": "1.0.0",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Bahar Hussain",
+			"email": "hello@baharhussain.com"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"includes/classes/"
+		],
+		"files": [
+			"includes/project.php"
+		]
+	}
+}

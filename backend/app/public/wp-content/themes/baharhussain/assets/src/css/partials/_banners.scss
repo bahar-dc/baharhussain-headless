@@ -1,0 +1,134 @@
+@use "./_tools" as *;
+
+$bh_images_path: "../images/" !default;
+
+
+.hero-section {
+	padding: var(--bh_spr_40) 0;
+}
+
+.yoast-breadcrumbs {
+	margin-bottom: 40px;
+	font-size: var(--bh_spr_16_12);
+	line-height: 1.2;
+	 
+	color: var(--bh_breadcrumbs_color);
+
+	a,
+	a:visited {
+		color: var(--bh_breadcrumbs_link_color);
+		display: inline-flex;
+		font-weight: 400 !important;
+
+		&::after {
+			content: "";
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			background-image: url(#{$bh_images_path}arrow-right-gray.svg);
+			background-repeat: no-repeat;
+			margin-left: 4px;
+			margin-right: 4px;
+			transform: scaleX(1);
+			background-size: 20px;
+		}
+
+		&:hover {
+			color: var(--bh_breadcrumbs_link_hover_color);
+		}
+	}
+
+	span[aria-current="page"] {
+
+		@include font(switzer, med);
+		color: var(--bh_breadcrumbs_color);
+	}
+
+	span.breadcrumb_last {
+		color: var(--bh_breadcrumbs_color);
+	}
+}
+
+.hero-section-content {
+	max-width: 895px;
+	margin-inline: auto;
+}
+
+
+.hero-section-image {
+	aspect-ratio: 16 / 9;
+	border-radius: var(--bh_border_radius_24);
+	overflow: hidden;
+}
+
+.tax-topics .hero-section-image {
+	aspect-ratio: 1360 / 320;
+}
+
+.hero-section-meta {
+	gap: 14px;
+	color: var(--bh_black_6);
+
+	.post-card-date,
+	.hero-section-post-time {
+		color: var(--bh_black_6);
+	}
+
+	.post-card-date {
+
+		a,
+		a:visited {
+			background-image: url(#{$bh_images_path}calendar-gray.svg);
+
+			@include font(switzer, reg);
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.page-back-links {
+	padding-top: 16px;
+	margin-bottom: 40px;
+
+	a {
+		color: var(--bh_page_back_links_color);
+		font-size: var(--bh_fs_page_back_links);
+		line-height: var(--bh_page_back_links_line_height);
+
+		@include font(switzer, med);
+		display: inline-flex;
+		align-items: center;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			background-image: url(#{$bh_images_path}arrow-left.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-right: 8px;
+		}
+
+		&:hover {
+			color: var(--bh_page_back_links_color);
+		}
+	}
+}
+
+
+@include responsive("tabfull") {
+
+	.tax-topics .hero-section-image {
+		aspect-ratio: 358 / 200;
+	}
+
+	.hero-section-content {
+
+		h1 {
+			font-size: 32px;
+			line-height: 1.2;
+		}
+	}
+}

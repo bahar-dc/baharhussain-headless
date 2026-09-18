@@ -1,0 +1,36 @@
+{
+	"name": "bahar-hussain-theme",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Bahar Hussain custom WordPress theme",
+	"scripts": {
+		"initial-project-setup": "npm install",
+		"start": "npm run start:dev",
+		"start-dev": "npm run start:dev",
+		"start:dev": "cross-env WATCHPACK_POLLING=true concurrently -n assets,blocks -c blue,green \"wp-scripts start --config ./webpack.config.assets.js\" \"wp-scripts start --webpack-src-dir=assets/src/blocks --config ./webpack.config.blocks.js\"",
+		"build": "cross-env CLEAN=true npm run build:assets && cross-env CLEAN=true npm run build:blocks",
+		"build--full-project-for-deployment": "npm run build",
+		"build:assets": "wp-scripts build --config ./webpack.config.assets.js",
+		"build--assets": "npm run build:assets",
+		"build:blocks": "wp-scripts build --webpack-src-dir=assets/src/blocks --config ./webpack.config.blocks.js",
+		"build--blocks": "npm run build:blocks",
+		"debug": "cross-env VERBOSE=true npm run build",
+		"debug-webpack-errors": "npm run debug"
+	},
+	"devDependencies": {
+		"@babel/runtime": "^7.29.2",
+		"@wordpress/dom-ready": "^4.0.0",
+		"@wordpress/scripts": "^28.6.0",
+		"concurrently": "9.2.1",
+		"copy-webpack-plugin": "^12.0.2",
+		"cross-env": "10.1.0",
+		"html-loader": "^5.0.0",
+		"mini-css-extract-plugin": "^2.9.0",
+		"webpack-remove-empty-scripts": "^1.0.4"
+	},
+	"engines": {
+		"node": ">=24.0.0"
+	},
+	"author": "Bahar Hussain",
+	"license": "GPL-2.0-or-later"
+}

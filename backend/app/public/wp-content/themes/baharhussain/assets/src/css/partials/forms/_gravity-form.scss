@@ -1,0 +1,233 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Project Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+.gfields {
+	margin: 0;
+}
+
+.gf_clear {
+	clear: both;
+}
+
+.ginput_left,
+.name_first {
+	float: left;
+	width: 48%;
+}
+
+.ginput_right,
+.name_last {
+	float: right;
+	width: 48%;
+}
+
+.gfield {
+	box-sizing: border-box;
+	position: relative;
+}
+
+.gfield_time_hour,
+.gfield_time_minute,
+.gfield_time_ampm {
+	width: calc(33.33% - 3px);
+	display: inline-block;
+}
+
+.gfield_time_minute {
+	margin: 0 var(--bh_spr_10);
+	width: calc(33.33% - 23px);
+}
+
+.below.hour_minute_colon {
+	display: none;
+}
+
+.gfield_post_tags_hint {
+	margin-top: calc(var(--bh_spr_20) * -1);
+	font-size: var(--bh_fs_14);
+}
+
+.gfield.half-input-field {
+	width: 48%;
+	margin-right: calc(4% - 5px);
+	display: inline-block;
+	vertical-align: top;
+
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.gfield_list_group {
+	margin-bottom: var(--bh_spr_20);
+}
+
+button {
+
+	&.add_list_item,
+	&.delete_list_item {
+		margin: 0 var(--bh_spr_10) var(--bh_spr_10) 0;
+		padding: var(--bh_spr_6) var(--bh_spr_10);
+		font-size: 90%;
+		position: relative;
+		top: calc(var(--bh_spr_6) * -1);
+	}
+
+	&.delete_list_item {
+		background-color: var(--bh_reset_button_bgcolor);
+		color: var(--bh_reset_button_color);
+		border: 2px solid transparent;
+
+		&:hover {
+			background-color: transparent;
+			border: 2px solid var(--bh_reset-button-border-color-hover);
+		}
+	}
+}
+
+.gform_fileupload_rules {
+	font-size: 90%;
+	color: var(--bh_fileupload_rule_color);
+	margin-bottom: var(--bh_spr_10);
+	display: inline-block;
+	position: relative;
+	top: calc(var(--bh_spr_16) * -1);
+}
+
+.gfield_validation_message {
+	color: var(--bh_red);
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+/* =====  End of Date Picker Style for Gravity Form ====== */
+.gform_wrapper.gravity-theme.gform_validation_error .gfield_validation_message,
+.gform_wrapper.gravity-theme.gform_validation_error .validation_message {
+	display: inline-block;
+	background-color: unset;
+	border: unset;
+	font-size: var(--bh_fs_14);
+	padding: 0;
+	position: relative;
+	top: calc(var(--bh_spr_20) * -1);
+	color: var(--bh_red);
+}
+
+.gfield_error {
+
+	input {
+		border-color: var(--bh_red);
+
+		&:focus {
+			border-color: var(--bh_red);
+		}
+	}
+}
+
+.gform_confirmation_message {
+	background-color: var(--bh_confirmation_message_bgcolor);
+	padding: var(--bh_spr_16);
+	font-size: var(--bh_fs_16);
+	color: var(--bh_confirmation_message_color);
+	border-radius: var(--bh_border_radius_16);
+	line-height: 1.4;
+	text-align: center;
+}
+
+.gform_validation_errors {
+	font-size: 105%;
+	font-weight: initial !important;
+	color: var(--bh_black) !important;
+	margin-bottom: 16px;
+
+	h2 {
+		color: var(--bh_red) !important;
+	}
+
+	ol {
+		display: none;
+	}
+
+	.gform_submission_error {
+		color: var(--bh_valiation_error_color);
+		margin: 0;
+		font-size: var(--bh_fs_16);
+		line-height: 1.4;
+		text-transform: initial;
+
+		@include font(switzer, reg);
+	}
+}
+
+.gfield_required_text {
+	color: var(--bh_required_text_color);
+	position: relative;
+	margin-left: var(--bh_spr_6);
+}
+
+/**
+ *
+ * Style for hidden field in gravity form
+ *
+ */
+
+.gfield_visibility_hidden {
+	display: none !important;
+}
+
+/**
+ *
+ * Spinner
+ *
+ */
+img.gform_ajax_spinner {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.ui-datepicker-calendar {
+	max-width: 600px;
+}
+
+.gform_wrapper.gravity-theme .gfield textarea.large {
+	height: auto !important;
+}
+
+.gfield--type-honeypot {
+	display: none;
+}
+
+.gform_fields {
+	gap: 0;
+	justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gfield.gfield--width-half {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(50% - 10px);
+}
+
+.gfield.gfield--width-full {
+	width: 100%;
+}
+
+
+@include responsive("tabfull") {
+
+	.gfield.gfield--width-half {
+		width: 100%;
+
+		input {
+			margin-bottom: 0;
+		}
+	}
+}

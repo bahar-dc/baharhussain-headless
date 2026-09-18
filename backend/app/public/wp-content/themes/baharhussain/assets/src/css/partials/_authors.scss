@@ -1,0 +1,138 @@
+
+@use "./_tools" as *;
+@use "./tags";
+
+.widget-label {
+	color: var(--bh_black_7);
+	font-size: var(--bh_fs_14);
+	margin-bottom: var(--bh_spr_12);
+}
+
+
+.author-profile-section .two-columns {
+	margin-bottom: var(--bh_spr_8);
+}
+
+.author-column-meta {
+	gap: var(--bh_spr_16);
+
+	.author-name {
+		font-size: var(--bh_fs_24);
+	}
+}
+
+.author-column-img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.show-more-btn {
+	display: none;
+	color: var(--bh_widget_showmore_btn_color);
+
+	@include font(switzer, med);
+	font-size: var(--bh_fs_16);
+	margin-top: var(--bh_spr_16) !important;
+	align-items: center;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		position: relative;
+		background-image: url(../images/arrow-down.svg);
+		background-repeat: no-repeat;
+		background-size: 16px;
+		background-position: center;
+		margin-left: var(--bh_spr_8);
+	}
+
+	&.show-less {
+
+		&::after {
+			transform: scaleY(-1);
+		}
+	}
+}
+
+.author-profile-content-area {
+	padding: var(--bh_spr_24) !important;
+}
+
+.author-profile-text {
+	padding-bottom: var(--bh_spr_32);
+	margin-bottom: var(--bh_spr_32);
+	border-bottom: 1px solid var(--bh_white_5);
+
+	h3 {
+		margin-bottom: var(--bh_spr_16);
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border: 0;
+	}
+}
+
+.text-content {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	width: 100%;
+
+	&.clamped {
+		-webkit-line-clamp: 3;
+	}
+}
+
+.link-icon {
+	line-height: 1;
+}
+
+@include responsive("medium") {
+
+	.author-profile-section {
+
+		.widget-columns.flex-between-center {
+			gap: 16px;
+		}
+	}
+}
+
+@include responsive("tabfull") {
+
+	.author-profile-section {
+
+		.widget-columns.flex-between-center {
+			gap: 16px;
+		}
+	}
+
+	.post-card-author-head .author-info-area {
+		gap: 8px;
+	}
+}
+
+@include responsive("small") {
+
+	.author-profile-section {
+
+		.author-column-img {
+			width: 40px;
+			height: 40px;
+		}
+
+		.author-column-meta {
+			gap: 8px;
+		}
+
+		.two-columns {
+			row-gap: 8px;
+		}
+	}
+}

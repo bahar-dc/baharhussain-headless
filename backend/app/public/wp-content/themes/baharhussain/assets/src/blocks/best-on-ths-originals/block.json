@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ths/best-on-ths-originals",
+	"version": "1.0.0",
+	"title": "Best On - THS Originals",
+	"category": "ths-originals",
+	"icon": "align-center",
+	"description": "",
+	"supports": {
+		"html": false,
+		"align": [
+			"wide"
+			]
+	},
+	"attributes": {
+		"preview": {
+			"type": "boolean",
+			"default": false
+		},
+		"blockTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "dbt-ctn-dft-bg"
+		},
+		"bgWidth": {
+			"type": "string",
+			"default": "dbt-ctn-1360"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "dbt-spr-48"
+		},
+		"marginBottom": {
+			"type": "string",
+			"default": "dbt-spr-48"
+		}
+	},
+	"example": {
+		"attributes": {
+			"preview": true
+		}
+	},
+	"textdomain": "baharhussain",
+	"editorScript": "file:./index.js",
+	"viewScript": "wp-theme-post-slider",
+	"render": "file:./best-on-ths-originals.php",
+	"style": "file:./best-on-ths-originals-styles.css",
+	"editorStyle": "file:./best-on-ths-originals-styles.css"
+}

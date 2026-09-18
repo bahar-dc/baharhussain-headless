@@ -1,0 +1,171 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Project Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+// Description List
+
+dl {
+	margin: 0 0 var(--bh_spr_24);
+
+	dt {
+		font-weight: 700;
+	}
+
+	dd {
+		margin: 0 0 var(--bh_spr_12);
+	}
+}
+
+// Ordered / Unordered List
+ul,
+ol {
+	margin: 0 0 var(--bh_spr_24) var(--bh_spr_24);
+}
+
+ul li,
+ol li {
+	margin: 0 0 var(--bh_spr_12);
+	box-sizing: border-box;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin: var(--bh_spr_12) 0 0 var(--bh_spr_24);
+}
+
+.page-section,
+.editor-styles-wrapper {
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding: 0;
+
+		ul,
+		ol {
+			margin-left: var(--bh_spr_12);
+		}
+
+		li {
+			padding-left: var(--bh_spr_16);
+			position: relative;
+
+			&::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background-position: left top;
+				position: absolute;
+				background-color: var(--bh_list_marker_bgcolor);
+				left: 0;
+				top: 9px;
+				border-radius: 50%;
+			}
+		}
+
+		ol {
+			counter-reset: list1;
+
+			li {
+
+				&::before {
+					counter-increment: list1;
+					content: counters(list1, ".") ".";
+				}
+			}
+		}
+
+		@for $i from 1 through 100 {
+			.ol[start="#{$i}"] {
+				counter-reset: list1 $i;
+
+				li {
+
+					&::before {
+						counter-increment: list1;
+						content: counters(list1, ".") ".";
+					}
+				}
+			}
+		}
+	}
+
+	ol {
+		counter-reset: list;
+		list-style-type: none;
+		margin-left: 0;
+
+		ol,
+		ul {
+			margin-left: var(--bh_spr_16);
+		}
+
+		li {
+			position: relative;
+			padding-left: var(--bh_spr_24);
+
+			&::marker {
+				display: none;
+			}
+
+			&::before {
+
+				@include font(switzer, reg);
+
+				color: var(--bh_ol_list_marker_color);
+				content: counters(list, ".") ".";
+				counter-increment: list;
+				left: 0;
+				top: 0;
+				position: absolute;
+				background-color: transparent;
+			}
+		}
+
+		ol {
+
+			li {
+				padding-left: var(--bh_spr_32);
+			}
+
+			ol {
+
+				li {
+					padding-left: var(--bh_spr_64);
+				}
+
+				ol {
+
+					li {
+						padding-left: var(--bh_spr_80);
+					}
+				}
+			}
+		}
+
+		ul {
+			counter-reset: unset;
+
+			li {
+				padding-left: var(--bh_spr_20);
+
+				&::before {
+					content: "";
+					width: 6px;
+					height: 6px;
+					background-position: left top;
+					position: absolute;
+					background-color: var(--bh_list_marker_bgcolor);
+					left: 0;
+					top: 9px;
+				}
+			}
+		}
+	}
+}
