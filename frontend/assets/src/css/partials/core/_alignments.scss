@@ -1,0 +1,110 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+.page-section {
+
+	> div {
+
+		> :where(
+		:not(.alignleft):not(.alignright):not(.alignfull):not(
+			section
+		):not(.alignwide)
+	) {
+			max-width: var(--wp--style--global--content-size);
+			width: 90%;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		> .alignwide {
+			max-width: var(--wp--style--global--wide-size);
+			width: 90%;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
+	.wrapper .alignwide {
+		width: 100%;
+	}
+}
+
+.alignnone {
+	margin: var(--bh_spr_16) 0 var(--bh_spr_30);
+}
+
+.aligncenter {
+	display: block;
+	margin: var(--bh_spr_16) auto var(--bh_spr_30);
+	clear: both;
+	text-align: center;
+}
+
+.alignright {
+	float: right;
+	margin: var(--bh_spr_16) 0 var(--bh_spr_30) 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: var(--bh_spr_16) var(--bh_spr_20) var(--bh_spr_30) 0;
+}
+
+a img {
+
+	&.alignright {
+		float: right;
+		margin: var(--bh_spr_16) 0 var(--bh_spr_30) var(--bh_spr_20);
+	}
+
+	&.alignnone {
+		margin: var(--bh_spr_16) 0 var(--bh_spr_30);
+	}
+
+	&.alignleft {
+		float: left;
+		margin: var(--bh_spr_16) var(--bh_spr_20) var(--bh_spr_30) 0;
+	}
+
+	&.aligncenter {
+		display: block;
+		margin: var(--bh_spr_16) auto var(--bh_spr_30);
+		text-align: center;
+		clear: both;
+	}
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.center-align {
+	text-align: center;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.left-align {
+	text-align: left;
+}
+
+.clear {
+	content: "";
+	display: table;
+	table-layout: fixed;
+	clear: both;
+
+	&::before,
+	&::after {
+		clear: both;
+	}
+}

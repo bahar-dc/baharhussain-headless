@@ -1,0 +1,23 @@
+@use "../_tools" as *;
+
+.post-shares {
+	display: flex;
+
+	span {
+		text-transform: uppercase;
+
+		@include font(switzer, bold);
+	}
+
+	.social-icons {
+		margin-left: var(--bh_spr_10);
+		margin-top: calc(-1 * var(--bh_spr_2));
+
+		a:hover img,
+		a:visited:hover img {
+			filter:
+				invert(95%) sepia(5%) saturate(0%) hue-rotate(6deg)
+				brightness(105%) contrast(106%);
+		}
+	}
+}

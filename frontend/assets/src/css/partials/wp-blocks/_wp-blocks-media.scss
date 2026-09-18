@@ -1,0 +1,24 @@
+// Media
+
+.wp-block-cover-text {
+	color: var(--bh_wp--preset--color--white) !important;
+}
+
+// Gallery
+
+.wp-block-gallery .wp-block-image a {
+	border-bottom: none;
+}
+
+.page-section {
+
+	.wp-block-gallery ul li {
+		padding: 0;
+
+		&::before {
+			display: none;
+		}
+	}
+}
+
+// Image

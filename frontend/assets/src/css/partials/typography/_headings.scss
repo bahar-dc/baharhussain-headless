@@ -1,0 +1,95 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6 {
+	@include font(wsans, sbold);
+	margin: 0 0 var(--bh_spr_24);
+	color: var(--bh_heading_color);
+	line-height: var(--bh_lh_h2);
+	letter-spacing: -0.03em;
+}
+
+h1,
+.heading-1 {
+	line-height: var(--bh_lh_h1);
+	font-size: var(--bh_fs_h1);
+	color: var(--bh_heading_color);
+}
+
+h2,
+.heading-2 {
+	font-size: var(--bh_fs_h2);
+	line-height: var(--bh_lh_h2);
+}
+
+h3,
+.heading-3 {
+	font-size: var(--bh_fs_h3);
+	line-height: var(--bh_lh_h3);
+}
+
+h4,
+.heading-4 {
+	font-size: var(--bh_fs_h4);
+	line-height: var(--bh_lh_h4);
+}
+
+h5,
+.heading-5 {
+	font-size: var(--bh_fs_h5);
+	line-height: var(--bh_lh_h5);
+	margin-bottom: var(--bh_spr_16);
+}
+
+h6,
+.heading-6 {
+
+	@include font(manrope, bold);
+	font-size: var(--bh_fs_small);
+	line-height: var(--bh_lh_small);
+	margin-bottom: var(--bh_spr_12);
+}
+
+p {
+	margin: 0 0 var(--bh_spr_32);
+
+	// &:last-of-type {
+	// 	margin: 0;
+	// }
+}
+
+
+@include responsive("tabfull") {
+
+	.wp-block-heading {
+
+		br {
+			display: none;
+		}
+	}
+}
+
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.no-heading-style {
+	line-height: 0;
+}

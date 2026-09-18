@@ -1,0 +1,143 @@
+// Calendar
+
+.wp-block-calendar {
+
+	a {
+		text-decoration: none;
+	}
+
+	table {
+		margin: 0 0 var(--bh_spr_20);
+
+		caption,
+		tbody {
+			color: none;
+		}
+
+		tbody td,
+		th {
+			padding: var(--bh_spr_10) var(--bh_spr_16);
+			border: none;
+		}
+
+		th {
+			background-color: transparent;
+			font-weight: 700;
+		}
+	}
+}
+
+// Categories List
+
+.wp-block-archives-dropdown.wp-block-archives,
+.wp-block-categories-dropdown.wp-block-categories {
+
+	select {
+		margin: 0;
+	}
+}
+
+// Latest Comments
+
+.wp-block-latest-comments .avatar,
+.wp-block-latest-comments__comment-avatar {
+	border-radius: unset;
+	margin-top: var(--bh_spr_4);
+}
+
+.wp-block-latest-comments__comment-date {
+	margin: var(--bh_spr_6) 0;
+	color: var(--bh_widget_comments_meta_color);
+}
+
+.wp-block-latest-comments__comment-excerpt p {
+	font-size: 100%;
+	line-height: 1.5;
+	margin: var(--bh_spr_6) 0;
+}
+
+// Latest Posts
+
+.wp-block-latest-posts__featured-image {
+
+	a {
+		border-bottom: none;
+	}
+
+	&.alignleft {
+		margin: 0 var(--bh_spr_20) var(--bh_spr_10) 0;
+	}
+
+	&.alignright {
+		margin: 0 0 var(--bh_spr_10) var(--bh_spr_20);
+	}
+
+	&.aligncenter {
+		margin: 0 auto var(--bh_spr_10);
+	}
+}
+
+.wp-block-latest-posts__post-author,
+.wp-block-latest-posts__post-date {
+	font-size: 90%;
+	color: var(--bh_widget_latest_post_meta_color);
+}
+
+.wp-block-latest-posts.is-grid li {
+	margin-bottom: var(--bh_spr_12);
+}
+
+// RRS
+
+.wp-block-rss__item-author,
+.wp-block-rss__item-publish-date {
+	font-size: 90%;
+	color: var(--bh_widget_rss_feed_meta_color);
+}
+
+.wp-block-rss__item-excerpt {
+	margin: var(--bh_spr_10) 0 var(--bh_spr_20);
+}
+
+// Search
+
+input[type="search"].wp-block-search__input {
+	background-image: unset;
+	padding: 0 var(--bh_spr_12);
+	margin-bottom: 0;
+}
+
+.wp-block-search__button {
+	border: none;
+	margin-right: 0;
+	padding: 0 var(--bh_spr_20);
+
+	&:hover {
+		border: none;
+		background-color: var(--bh_wp--preset--color--white);
+	}
+}
+
+// Social Links
+
+.wp-block-social-links {
+
+	li.wp-block-social-link {
+		list-style: none;
+		padding-left: 0;
+
+		&::before {
+			display: none;
+		}
+
+		svg {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Tag Cloud
+
+.wp-block-tag-cloud .tag-cloud-link {
+	margin: 0 var(--bh_spr_8) var(--bh_spr_12) 0;
+}

@@ -1,0 +1,580 @@
+@use "../_tools" as *;
+:root {
+
+	--bh_font_body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+	/* Design system spacing scale */
+	@include spacing(--bh_spr_0, 0, 0);
+	@include spacing(--bh_spr_2, 2px, 2px);
+	@include spacing(--bh_spr_4, 4px, 4px);
+	@include spacing(--bh_spr_6, 6px, 6px);
+	@include spacing(--bh_spr_8, 8px, 8px);
+	@include spacing(--bh_spr_10, 10px, 10px);
+	@include spacing(--bh_spr_12, 12px, 12px);
+	@include spacing(--bh_spr_12_4, 12px, 4px);
+	@include spacing(--bh_spr_12_8, 12px, 8px);
+	@include spacing(--bh_spr_14, 14px, 12px);
+	@include spacing(--bh_spr_14_14, 14px, 14px);
+	@include spacing(--bh_spr_14_8, 14px, 8px);
+	@include spacing(--bh_spr_16, 16px, 16px);
+	@include spacing(--bh_spr_16_6, 16px, 6px);
+	@include spacing(--bh_spr_16_8, 16px, 8px);
+	@include spacing(--bh_spr_16_12, 16px, 12px);
+	@include spacing(--bh_spr_18, 18px, 16px);
+	@include spacing(--bh_spr_20_12, 20px, 12px);
+	@include spacing(--bh_spr_20_16, 20px, 16px);
+	@include spacing(--bh_spr_20, 20px, 18px);
+	@include spacing(--bh_spr_24_16, 24px, 16px);
+	@include spacing(--bh_spr_24, 24px, 24px);
+	@include spacing(--bh_spr_24_20, 24px, 20px);
+	@include spacing(--bh_spr_32_24, 32px, 24px);
+	@include spacing(--bh_spr_32, 32px, 32px);
+	@include spacing(--bh_spr_48_32, 48px, 32px);
+	@include spacing(--bh_spr_40_32, 40px, 32px);
+	@include spacing(--bh_spr_40_16, 40px, 16px);
+	@include spacing(--bh_spr_40, 40px, 24px);
+	@include spacing(--bh_spr_48, 48px, 48px);
+	@include spacing(--bh_spr_64_48, 64px, 48px);
+	@include spacing(--bh_spr_64, 64px, 64px);
+	@include spacing(--bh_spr_60, 64px, 40px);
+	@include spacing(--bh_spr_60_0, 64px, 0);
+	@include spacing(--bh_spr_70_24, 70px, 24px);
+	@include spacing(--bh_spr_72, 72px, 64px);
+	@include spacing(--bh_spr_80_64, 80px, 64px);
+	@include spacing(--bh_spr_80_32, 80px, 32px);
+	@include spacing(--bh_spr_80_40, 80px, 40px);
+	@include spacing(--bh_spr_80, 80px, 80px);
+	@include spacing(--bh_spr_96, 96px, 96px);
+	@include spacing(--bh_spr_96_64, 96px, 64px);
+	@include spacing(--bh_editor_ctn_space, 32px, 24px);
+	@include spacing(--bh_dbt_spr_30_ctn, 32px, 12px);
+
+	/* Font Sizes */
+	@include font_size(
+		--bh_fs_12,
+		12px,
+		12px
+	);
+	
+	@include font_size(
+		--bh_fs_14,
+		14px,
+		14px
+	);
+	@include font_size(
+		--bh_fs_16,
+		16px,
+		16px
+	);
+	@include font_size(
+		--bh_fs_18,
+		18px,
+		18px
+	);
+	@include font_size(
+		--bh_fs_20,
+		20px,
+		18px
+	);
+	@include font_size(
+		--bh_fs_24,
+		24px,
+		20px
+	);
+	@include font_size(
+		--bh_fs_28,
+		28px,
+		20px
+	);
+	@include font_size(
+		--bh_fs_32,
+		32px,
+		24px
+	);
+	@include font_size(
+		--bh_fs_40,
+		40px,
+		32px
+	);
+	@include font_size(
+		--bh_fs_40_24,
+		40px,
+		24px
+	);
+	@include font_size(
+		--bh_fs_48,
+		48px,
+		40px
+	);
+	@include font_size(
+		--bh_fs_56,
+		56px,
+		40px
+	);
+	@include font_size(
+		--bh_fs_92_82,
+		82px,
+		58px
+	);
+
+	--bh_fs_h1: var(--bh_fs_92_82);
+	--bh_fs_h2: var(--bh_fs_56);
+	--bh_fs_h3: var(--bh_fs_40);
+	--bh_fs_h4: var(--bh_fs_28);
+	--bh_fs_h5: var(--bh_fs_20);
+	--bh_fs_body_base: var(--bh_fs_18);
+	--bh_fs_small: var(--bh_fs_14);
+	--bh_fs_eyebrow: var(--bh_fs_16);
+	--bh_fs_hero_title: var(--bh_fs_56);
+	--bh_fs_hero_text: var(--bh_fs_18);
+	--bh_fs_hero_meta: var(--bh_fs_16);
+	--bh_fs_hero_badge: var(--bh_fs_16);
+	--bh_fs_hero_icon: var(--bh_fs_32);
+	--bh_fs_hero_code: var(--bh_fs_16);
+	--bh_fs_hero_stat: var(--bh_fs_14);
+	--bh_fs_hero_stat_number: var(--bh_fs_32);
+	--bh_fs_stats_value: var(--bh_fs_40);
+	--bh_fs_stats_title: var(--bh_fs_24);
+	--bh_fs_stats_text: var(--bh_fs_18);
+	--bh_fs_stats_icon: var(--bh_fs_32);
+	--bh_fs_section_title: var(--bh_fs_56);
+	--bh_fs_section_text: var(--bh_fs_18);
+	--bh_fs_services_title: var(--bh_fs_56);
+	--bh_fs_services_text: var(--bh_fs_18);
+	--bh_fs_service_title: var(--bh_fs_24);
+	--bh_fs_service_text: var(--bh_fs_16);
+	--bh_fs_service_link: var(--bh_fs_16);
+	--bh_fs_projects_title: var(--bh_fs_48);
+	--bh_fs_projects_text: var(--bh_fs_18);
+	--bh_fs_project_label: var(--bh_fs_14);
+	--bh_fs_project_title: var(--bh_fs_24);
+	--bh_fs_project_text: var(--bh_fs_16);
+	--bh_fs_project_tag: var(--bh_fs_12);
+	--bh_fs_project_link: var(--bh_fs_16);
+	--bh_fs_why_number: var(--bh_fs_16);
+	--bh_fs_why_item_title: var(--bh_fs_20);
+	--bh_fs_why_item_text: var(--bh_fs_14);
+	--bh_fs_why_quote: var(--bh_fs_24);
+	--bh_fs_why_proof: var(--bh_fs_18);
+	--bh_fs_why_signature: var(--bh_fs_32);
+	--bh_fs_why_meta: var(--bh_fs_16);
+	--bh_fs_process_brand: var(--bh_fs_18);
+	--bh_fs_process_meta: var(--bh_fs_14);
+	--bh_fs_process_number: var(--bh_fs_20);
+	--bh_fs_process_title: var(--bh_fs_20);
+	--bh_fs_process_text: var(--bh_fs_16);
+	--bh_fs_process_mark: var(--bh_fs_16);
+	--bh_fs_standard_title: var(--bh_fs_18);
+	--bh_fs_standard_text: var(--bh_fs_14);
+	--bh_fs_tools_title: var(--bh_fs_16);
+	--bh_fs_tool_name: var(--bh_fs_14);
+	--bh_fs_testimonial_quote: var(--bh_fs_32);
+	--bh_fs_testimonial_name: var(--bh_fs_18);
+	--bh_fs_testimonial_meta: var(--bh_fs_16);
+	--bh_fs_testimonial_logo: var(--bh_fs_24);
+	--bh_fs_cta_title: var(--bh_fs_56);
+	--bh_fs_cta_text: var(--bh_fs_24);
+	--bh_fs_cta_button: var(--bh_fs_18);
+	--bh_fs_cta_proof_title: var(--bh_fs_18);
+	--bh_fs_cta_proof_text: var(--bh_fs_16);
+
+	/* Line Height */
+	--bh_lh_110: 1.1;
+	--bh_lh_120: 1.2;
+	--bh_lh_130: 1.3;
+	--bh_lh_140: 1.4;
+	--bh_lh_160: 1.6;
+	--bh_lh_170: 1.7;
+	--bh_lh_h1: var(--bh_lh_110);
+	--bh_lh_h2: var(--bh_lh_120);
+	--bh_lh_h3: var(--bh_lh_130);
+	--bh_lh_h4: var(--bh_lh_140);
+	--bh_lh_h5: var(--bh_lh_140);
+	--bh_lh_body_base: var(--bh_lh_170);
+	--bh_lh_small: var(--bh_lh_160);
+
+	/* Border Radius */
+	--bh_border_radius_8: 8px;
+	--bh_border_radius_12: 12px;
+	--bh_border_radius_16: 16px;
+	--bh_border_radius_24: 24px;
+	--bh_border_radius_32: 32px;
+
+	/* border radius */	
+	--bh_border-radius-16: 16px;
+
+	/* Primitive variables */
+
+	/* Design system colors */
+	--bh_color_main_blue: #2563eb;
+	--bh_color_dark_blue: #1d4ed8;
+	--bh_color_light_blue: #dbeafe;
+	--bh_color_neutral_background: #f8f8f5;
+	--bh_color_neutral_white: #ffffff;
+	--bh_color_neutral_border: #e5e7eb;
+	--bh_color_text_heading: #050505;
+	--bh_color_text_body: #333333;
+	--bh_color_text_muted: #666666;
+	--bh_color_surface_dark: #0b1120;
+
+	/* Blacks */
+	--bh_black_f: var(--bh_color_text_heading);
+	--bh_black: var(--bh_color_text_heading);
+	--bh_black_1: var(--bh_color_surface_dark);
+	--bh_black_3: #262626;
+	--bh_black_4: #2d2d2d;
+	--bh_black_6: var(--bh_color_text_muted);
+	--bh_black_7: var(--bh_color_text_muted);
+	--bh_black_8: #888;
+	--bh_black_9: #929292;
+
+	/* Whites */
+	--bh_white_f: var(--bh_color_neutral_white);
+	--bh_white: var(--bh_color_neutral_white);
+	--bh_white_1: var(--bh_color_neutral_background);
+	--bh_white_2: var(--bh_color_neutral_white);
+	--bh_white_3: var(--bh_color_neutral_border);
+	--bh_white_4: var(--bh_color_neutral_background);
+	--bh_white_5: var(--bh_color_neutral_border);
+
+	/* Additional Colors */
+	--bh_red: #f00;
+	--bh_green: #16a34a;
+	--bh_color_main: var(--bh_color_main_blue);
+	--bh_color_background: var(--bh_color_neutral_background);
+	--bh_color_border: var(--bh_color_neutral_border);
+	--bh_color_heading: var(--bh_color_text_heading);
+	--bh_color_body_text: var(--bh_color_text_body);
+	--bh_color_muted_text: var(--bh_color_text_muted);
+
+	/* Tags */
+	--bh_tag_bg_1: #d3e0fb;
+	--bh_tag_bg_2: #fddcc5;
+	--bh_tag_bg_3: #d0f1ed;
+	--bh_tag_bg_4: #ffe1e1;
+	--bh_tag_bg_5: #e5d8fb;
+	--bh_tag_bg_6: #fce2b6;
+	--bh_tag_bg_7: #eae8ff;
+	--bh_tag_bg_8: #f5d9c5;
+	--bh_tag_bg_9: #fad1e5;
+	--bh_tag_bg_10: #d0eddb;
+	--bh_tag_bg_11: #b7e4f8;
+	--bh_tag_bg_12: #cfd1d4;
+
+	--bh_tag_text_1: #1556e5;
+	--bh_tag_text_2: #a74704;
+	--bh_tag_text_3: #0d756a;
+	--bh_tag_text_4: #d10812;
+	--bh_tag_text_5: #6415ea;
+	--bh_tag_text_6: #915b01;
+	--bh_tag_text_7: #1e1b4b;
+	--bh_tag_text_8: #7c2d12;
+	--bh_tag_text_9: #bc0d64;
+	--bh_tag_text_10: #107736;
+	--bh_tag_text_11: #096893;
+	--bh_tag_text_12: #111827;
+
+	--bh_main_color: var(--bh_color_main);
+
+	/* Semantic */
+	--bh_body_bg_color: var(--bh_color_background);
+	--bh_regular_text: var(--bh_color_body_text);
+	--bh_white_text: var(--bh_white);
+	--bh_captions: var(--bh_color_muted_text);
+	--bh_border: var(--bh_color_border);
+	--bh_pure_white: var(--bh_white);
+	--bh_pure_black: var(--bh_black);
+	--bh_transparent: transparent;
+	--bh_hero_background:
+		radial-gradient(circle at 2px 2px, rgb(26 82 229 / 0.08) 2px, transparent 2.5px) 0 58% / 18px 18px no-repeat,
+		linear-gradient(115deg, #f8fbff 0%, #edf3ff 54%, #f7f9ff 100%);
+
+	/* Block Token */
+
+	// Container
+	--bh_ctn_white: var(--bh_white);
+
+	// Post Card
+	--bh_post_card_bg_color: var(--bh_white);
+	--bh_post_card_border_color: var(--bh_white_3);
+
+	//card title
+	--bh_card_title_mtop: var(--bh_spr_16);
+	--bh_card_title_mbottom: var(--bh_spr_6);
+
+	//post slider card
+	--bh_card_title_color: var(--bh_black);
+	--bh_card_title_line-height: var(--bh_lh_110);
+
+	//post slider video card title
+	--bh_card_video_title_color: var(--bh_white);
+
+	//post slider video card excerpt
+	--bh_card_video_excerpt_color: var(--bh_white_3);
+	--bh_card_video_excerpt_line-height: var(--bh_lh_140);
+
+	//card exerpt
+	--bh_card_excerpt-color: var(--bh_black_7);
+	--bh_fs_card_excerpt: var(--bh_fs_14);
+	--bh_card_excerpt_line_height: var(--bh_lh_140);
+
+	//card author name
+	--bh_card_author_name_color: var(--bh_black);
+	--bh_fs_card_author_name: var(--bh_fs_14);
+	--bh_card_author_name_line_height: var(--bh_lh_120);
+	--bh_card_author_text: var(--bh_black_7);
+
+	//social icons styling
+
+	--bh_social_icons_bgcolor: var(--bh_white_4);
+	--bh_social_icons_border_color: var(--bh_black_7);
+
+	//card date
+	--bh_card_date_color: var(--bh_black_7);
+	--bh_fs_card_date: var(--bh_fs_14);
+	--bh_card_date_line_height: var(--bh_lh_120);
+
+	// subscribe blocks
+	--bh_shero_text_line_height: var(--bh_lh_140);
+	--bh_fs_shero_text: var(--bh_fs_18);
+	--bh_shero_btn_color: var(--bh_white);
+
+	// fans
+	--bh_fan_text_color: var(--bh_black_7);
+
+	// engagement
+	--bh_engagement_bgcolor: var(--bh_white_f);
+	--bh_engagement_paragraph_color: var(--bh_black_7);
+	--bh_engagement__title_color: var(--bh_black_f);
+	--bh_engagement_head_paragraph_color: var(--bh_black_6);
+	--bh_child_content_bgcolor: var(--bh_white_1);
+
+	/* Post Card */
+
+	--bh-feature-floating-color: var(--bh_black);
+
+	// Global Colors
+	--bh_body_color: var(--bh_regular_text);
+	--bh_selection_color: var(--bh_white_text);
+	--bh_selection_bgcolor: var(--bh_main_color);
+	--bh_caption_color: var(--bh_captions);
+
+	// back links
+
+	--bh_page_back_links_color: var(--bh_black);
+	--bh_fs_page_back_links: var(--bh_fs_16);
+	--bh_page_back_links_line_height: var(--bh_lh_140);
+
+	// Link
+	--bh_link_color: var(--bh_black);
+	--bh_link_color_hover: var(--bh_black);
+
+	// List
+	--bh_list_marker_bgcolor: var(--bh_black_6);
+	--bh_ol_list_marker_color: var(--bh_black_6);
+
+	// Blockquote
+	--bh_blockquote_color: var(--bh_black);
+	--bh_blockquote_bg_color: var(--bh_white);
+	--bh_quote_color: var(--bh_regular_text);
+	--bh_blockqoute_cite_color: var(--bh_light_text);
+
+	// Table
+	--bh_table_border_color: var(--bh_white_5);
+	--bh_table_head_border_color: var(--bh_white_5);
+	--bh_table_foot_border_color: var(--bh_white_5);
+
+	// Headings
+	--bh_heading_color: var(--bh_color_heading);
+
+	// Abbr
+	--bh_abbr_color: var(--bh_regular_text);
+	--bh_abbr_border_color: var(--bh_regular_text);
+
+	// Code
+	--bh_underline_border_color: var(--bh_regular_text);
+
+	--bh_delete_color: var(--bh_signal_red_text);
+
+	--bh_insert_color: var(--bh_signal_green_text);
+	--bh_insert_border_color: var(--bh_signal_green_text);
+
+	--bh_code_color: var(--bh_white_text);
+	--bh_code_bgcolor: var(--bh_main_color);
+
+	--bh_pre_color: var(--bh_white_text);
+	--bh_pre_bgcolor: var(--bh_main_color);
+
+	--bh_hr_bgcolor: var(--bh_border);
+
+	--bh_mark_bgcolor: var(--bh_signal_yellow_bg);
+	--bh_mark_color: var(--bh_regular_text);
+
+	// Forms
+
+	--bh_input_color: var(--bh_black_8);
+	--bh_input_bgcolor: var(--bh_white);
+	--bh_placeholder_color: var(--bh_black_6);
+	--bh_range_track_bgcolor: var(--bh_lgrey_bg);
+	--bh_range_thumb_bgcolor: var(--bh_main_color);
+	--bh_color_field_border_color: var(--bh_border);
+	--bh_color_field_bgcolor: var(--bh_lgrey_bg);
+	--bh_radio_color: var(--bh_regular_text);
+	--bh_radio_border_color: var(--bh_border);
+	--bh_radio_bgcolor: var(--bh_lgrey_bg);
+	--bh_radio_after_bgcolor: var(--bh_main_color);
+	--bh_checkbox_color: var(--bh_regular_text);
+	--bh_checkbox_border_color: var(--bh_border);
+	--bh_checkbox_bgcolor: var(--bh_lgrey_bg);
+	--bh_checkbox_after_bgcolor: var(--bh_main_color);
+	--bh_progress_bgcolor: var(--bh_lgrey_bg);
+	--bh_progress_value_bgcolor: var(--bh_main_color);
+	--bh_meter_bgcolor: var(--bh_lgrey_bg);
+	--bh_meter_value_bgcolor: var(--bh_main_color);
+	--bh_form_button_color: var(--bh_button_main_color);
+	--bh_form_button_bgcolor: var(--bh_button_main_bg);
+	--bh_form_button_border_color: var(--bh_button_main_border_color);
+	--bh_form_button_color_hover: var(--bh_white);
+	--bh_form_button_bgcolor_hover: var(--bh_button_main_bg_hover);
+	--bh_form_button_border_color_hover: var(--bh_button_main_border_color_hover);
+	--bh_reset_button_color: var(--bh_light_text);
+	--bh_reset_button_bgcolor: var(--bh_transparent);
+	--bh_reset_button_border_color: var(--bh_light_text);
+	--bh_reset_button_color_hover: var(--bh_white_text);
+	--bh_reset_button_bgcolor_hover: var(--bh_light_text);
+	--bh_reset_button_border_color_hover: var(--bh_light_text);
+	--bh_confirmation_message_bgcolor: var(--bh_white);
+	--bh_confirmation_message_color: var(--bh_signal_green_text);
+	--bh_required_text_color: var(--bh_signal_red_text);
+	--bh_fileupload_rule_color: var(--bh_light_text);
+	--bh_hubspot_error_label_color: var(--bh_signal_red_text);
+	--bh_hubspot_required_color: var(--bh_signal_red_text);
+	--bh_acc_btn_color: var(--bh_pure_black);
+	--bh_acc_btn_bgcolor: var(--bh_pure_white);
+
+	// Comments
+	--bh_comment_meta_color: var(--bh_dark_text);
+
+	// Pagination
+	--bh_pagination_bgcolor: var(--bh_white);
+	--bh_pagination_bgcolor_hover: var(--bh_black);
+	--bh_pagination_bgcolor_current: var(--bh_black);
+
+	--bh_pagination_color: var(--bh_black);
+	--bh_pagination_color_hover: var(--bh_white);
+	--bh_pagination_color_current: var(--bh_white);
+	--bh_pagination_first_color: var(--bh_white);
+
+	// Widgets
+	--bh_widget_comments_meta_color: var(--bh_light_text);
+	--bh_widget_latest_post_meta_color: var(--bh_signal_red_text);
+	--bh_widget_rss_feed_meta_color: var(--bh_signal_red_text);
+
+	// Theme
+	--bh_button_main_bg: var(--bh_main_color);
+	--bh_button_main_bg_hover: var(--bh_color_dark_blue);
+	--bh_button_main_color: var(--bh_white);
+	--bh_button_main_color_hover: var(--bh_white);
+	--bh_button_main_border_color: var(--bh_main_color);
+	--bh_button_main_border_color_hover: var(--bh_color_dark_blue);
+
+	// Footer
+
+	--bh_header_nav_color: var(--bh_black_f);
+	--bh_header_nav_color_hover: var(--bh_main_color);
+	--bh_header_nav_second_ul_bgcolor: var(--bh_white);
+	--bh_mobile_nav_button_bg: var(--bh_black_4);
+	--bh_mobile_nav_color: var(--bh_black);
+	--bh_mobile_nav_sub_link_color: var(--bh_black_7);
+	--bh_nav_overlay_bgcolor: var(--bh_white);
+	--bh_mobile_nav_icon_bgcolor: var(--bh_white_f);
+
+	// Header
+	--bh_header_top_border_color: var(--bh_white_3);
+	--bh_header_top_bg_color: var(--bh_white_f);
+	--bh_header_top_search_color: var(--bh_black);
+	--bh_header_top_search_bg_color: var(--bh_white_1);
+	--bh_header_bottom_bg_color: var(--bh_white_f);
+
+	// Slide Out
+	--bh_header_slideout_bg: var(--bh_white_1);
+	--bh_header_slideout_close_button_bg: var(--bh_white);
+	--bh_header_slideout_close_button_lines: var(--bh_black);
+	--bh_header_slideout_search_color: var(--bh_black);
+	--bh_header_slideout_search_bg: var(--bh_white);
+	--bh_header_slideout_menu_color: var(--bh_black);
+	--bh_header_slideout_menu_hover_bg: var(--bh_white_3);
+	--bh_header_slideout_menu_scroll_track: var(--bh_white);
+	--bh_header_slideout_menu_scroll_thumb: var(--bh_white_3);
+
+	// style variations
+	--bh_field_bg: var(--bh_white);
+
+	--bh_button_outline_bg_hover: var(--bh_color_light_blue);
+	--bh_button_outline_color: var(--bh_main_color);
+	--bh_button_outline_color_hover: var(--bh_white);
+	--bh_button_outline_border_color: var(--bh_main_color);
+	--bh_button_outline_border_color_hover: var(--bh_color_dark_blue);
+
+	--bh_link_arrow_color: var(--bh_black);
+
+	--bh_button_white_bg: var(--bh_white);
+	--bh_button_white_bg_hover: var(--bh_white);
+	--bh_button_white_color: var(--bh_main_color);
+	--bh_button_white_color_hover: var(--bh_main_color);
+	--bh_button_white_border_color: var(--bh_white_3);
+	--bh_button_white_border_color_hover: var(--bh_main_color);
+	--bh_button_dark_bg: var(--bh_black);
+	--bh_button_dark_bg_hover: var(--bh_black_3);
+	--bh_button_dark_color: var(--bh_white);
+	--bh_button_text_color: var(--bh_main_color);
+	--bh_button_text_color_hover: var(--bh_color_dark_blue);
+
+	// Widget Column
+	--bh_widget_column_bg_color: var(--bh_white);
+	--bh_widget_column_color: var(--bh_black_7);
+
+	// Widget Column Show more Button
+	--bh_widget_showmore_btn_color: var(--bh_black);
+
+	// Breadcrumbs
+	--bh_breadcrumbs_color: var(--bh_black_6);
+	--bh_breadcrumbs_link_color: var(--bh_black_9);
+	--bh_breadcrumbs_link_hover_color: var(--bh_black_9);
+
+	// Table of content sidebar
+	--bh_sdbr_link_color: var(--bh_black_7);
+	--bh_sdbr_link_hover_color: var(--bh_black);
+	--bh_sdbr_link_active_color: var(--bh_black);
+
+	--bh_card_author_link_color: var(--bh_black);
+	--bh_card_rating_stars_bg: var(--bh_white_1);
+	--bh_card_rating_stars_value: var(--bh_black);
+
+	// Comments Area
+	--bh_comment_item_bg_color: var(--bh_white);
+	--bh_comment_item_input_label_color: var(--bh_black);
+	--bh_comment_item_input_bg_color: var(--bh_white_1);
+	--bh_comment_item_placeholder_color: var(--bh_black_9);
+	--bh_comment_form_submit_bg_color: var(--bh_black);
+	--bh_comment_form_submit_border_color: var(--bh_black);
+	--bh_comment_form_submit_color: var(--bh_white);
+
+	// Movie Detail
+	--bh_post_movie_title_color: var(--bh_black);
+	--bh_post_movie_row_title_color: var(--bh_black);
+	--bh_post_movie_row_icon_color: var(--bh_black);
+	--bh_post_movie_border_color: var(--bh_white_5);
+
+	// Author Column Card title
+
+	--bh_card_author_border_color: var(--bh_white_2);
+
+	// Detail block color
+	--bh_detail_block_color: var(--bh_black);
+	--bh_table_bg_color: var(--bh_white);
+
+	--bh_signal_red_text: #b73315;
+	--bh_signal_green_text: #1c824c;
+	--bh_signal_yellow_text: #db8600;
+}

@@ -1,0 +1,167 @@
+@use "sass:math";
+
+/*
+Column width with margin
+*/
+@mixin fluidColumns($numberColumns, $minWidth, $gap, $rowGap: 0) {
+	$noOfColumns: math.div(100%, $numberColumns);
+	$minWidthCalc: min(clamp($minWidth, #{$noOfColumns} - #{$gap}, 100%), 100%);
+
+	grid-template-columns: repeat(auto-fit, minmax($minWidthCalc, 1fr));
+
+	@if $rowGap !=0 {
+		row-gap: $rowGap;
+		column-gap: $gap;
+	}
+
+	@else {
+		gap: $gap;
+	}
+}
+
+@mixin column($numberColumns, $gap) {
+	width: math.div(100%, $numberColumns) - math.div(($gap * ($numberColumns - 1)), $numberColumns);
+	margin-right: $gap;
+
+	@if $numberColumns ==2 {
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+
+	@else {
+		&:nth-child(#{$numberColumns}n + #{$numberColumns}) {
+			margin-right: 0;
+		}
+	}
+}
+
+/*
+Mixin for transition
+*/
+
+@mixin transition($property, $duration, $animation) {
+	transition: $property $duration $animation;
+}
+
+@function strip-unit($value) {
+
+	@if math.is-unitless($value) {
+		@return $value;
+	}
+
+	@return math.div($value, ($value * 0 + 1));
+}
+
+@mixin font_size($var-name, $max-font-size, $min-font-size, $min-vw: 474, $max-vw: 1280) {
+	$max-font-size: strip-unit($max-font-size);
+	$min-font-size: strip-unit($min-font-size);
+
+	#{$var-name}:
+		clamp(#{$min-font-size * 0.0625rem}, calc(#{$min-font-size * 0.0625rem} +
+		#{($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}px) / #{$max-vw - $min-vw})), #{$max-font-size * 0.0625rem});
+}
+
+@mixin spacing($var-name, $max-space, $min-space, $min-vw: 474, $max-vw: 1280) {
+	$max-space: strip-unit($max-space);
+	$min-space: strip-unit($min-space);
+
+	#{$var-name}:
+		clamp(#{$min-space * 1px}, calc(#{$min-space * 1px} +
+		#{($max-space - $min-space)} * ((100vw - #{$min-vw}px) / #{$max-vw - $min-vw})), #{$max-space * 1px});
+}
+
+@mixin responsive($breakpoint) {
+
+	@if $breakpoint == "mini" {
+
+		@media (max-width: 374px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "xssmall" {
+
+		@media (max-width: 459px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "medsmall" {
+
+		@media (min-width: 460px) and (max-width: 747px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "small" {
+
+		@media (max-width: 747px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "minsmall" {
+
+		@media (min-width: 747px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "tab" {
+
+		@media (min-width: 748px) and (max-width: 1003px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "tabfull" {
+
+		@media (max-width: 1003px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "max:1050" {
+
+		@media (max-width: 1050px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "medium" {
+
+		@media (min-width: 1004px) and (max-width: 1179px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "mediumfull" {
+
+		@media (max-width: 1179px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "screen" {
+
+		@media (min-width: 1180px) and (max-width: 1345px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "screenfull" {
+
+		@media (max-width: 1345px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "large" {
+
+		@media (min-width: 1346px) and (max-width: 1679px) {
+			@content;
+		}
+	}
+}

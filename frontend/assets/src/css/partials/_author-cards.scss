@@ -1,0 +1,94 @@
+
+@use "./_tools" as *;
+@use "./tags";
+
+
+.post-card-author {
+	padding: var(--bh_spr_16);
+	box-sizing: border-box;
+	background-color: var(--bh_white);
+	border-radius: var(--bh_border_radius_16);
+
+	.ths2d-content-area-ads-placement-second-paragraph {
+		display: none;
+	}
+}
+
+.post-card-author-head {
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--bh_card_author_border_color);
+
+	a,
+	a:visited {
+		width: 100%;
+		gap: var(--bh_spr_12);
+		color: var(--bh_card_author_link_color);
+	}
+
+	.author-info-area {
+		gap: var(--bh_spr_12);
+	}
+
+	.post-card-author-img {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			width: 100% !important;
+			height: 100% !important;
+			max-width: 100% !important;
+			margin: 0 !important;
+		}
+	}
+
+	.author-name {
+		font-size: var(--bh_fs_18);
+		line-height: 1.2;
+
+		@include font(switzer, sbold);
+	}
+}
+
+.post-card-author-bio {
+	font-size: var(--bh_fs_12);
+	color: var(--bh_card_author_text);
+}
+
+
+.sidebar-author-list-item {
+	margin-bottom: var(--bh_spr_8);
+
+	a,
+	a:visited {
+		background-color: var(--bh_post_card_bg_color);
+		padding: var(--bh_spr_16);
+		border-radius: var(--bh_border_radius_16);
+	}
+
+	.author-name {
+
+		@include font(wsans, med);
+		letter-spacing: -0.02em;
+	}
+
+	.post-card-author-head {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.author-list-article-count {
+	padding: var(--bh_spr_6) var(--bh_spr_10);
+	box-sizing: border-box;
+	border-radius: var(--bh_border_radius_8);
+	background-color: var(--bh_tag_bg_12);
+	font-size: var(--bh_fs_12);
+
+	@include font(switzer, reg);
+	color: var(--bh_tag_text_12);
+	line-height: 1.2;
+}

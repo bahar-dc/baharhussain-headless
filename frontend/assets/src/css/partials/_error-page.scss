@@ -1,0 +1,100 @@
+
+@use "./_tools" as *;
+
+/****
+ *
+ * 404 page
+ *
+****/
+.not-found {
+	text-align: center;
+	margin: auto;
+}
+
+.error {
+	text-align: center;
+	margin: var(--bh_spr_20) 0;
+	width: 100%;
+
+	.menu {
+		margin: 0;
+	}
+
+	ul li {
+		display: inline-block;
+		margin: 0 var(--bh_spr_10);
+		font-weight: 700;
+		padding: 0;
+
+		&::before {
+			display: none;
+		}
+
+		a {
+
+			&::after {
+				height: 2px;
+				transform: scaleX(0);
+				transform-origin: bottom right;
+			}
+
+			&:hover {
+
+				&::after {
+					transform-origin: bottom left;
+					transform: scaleX(1);
+				}
+			}
+		}
+
+		ul {
+			display: none;
+		}
+	}
+}
+
+.no-results.not-found,
+.form-404 {
+
+	form {
+		max-width: 500px;
+		margin-inline: auto;
+		margin-bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		input[type="search"] {
+			margin-bottom: 0;
+			width: 100%;
+		}
+
+		> label {
+			flex: 1 1 auto;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.form-404 {
+	margin: var(--bh_spr_48) auto 0;
+	max-width: 620px;
+
+	p {
+		margin-bottom: var(--bh_spr_20);
+	}
+
+	label {
+		margin-bottom: 0;
+		width: calc(100% - 130px);
+	}
+
+	input[type="submit"] {
+		background-color: var(--);
+	}
+}

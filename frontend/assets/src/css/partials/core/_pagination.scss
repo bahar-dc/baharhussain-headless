@@ -1,0 +1,197 @@
+@use "../_tools" as *;
+
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+
+.pagination-list {
+	background-color: var(--bh_pagination_bgcolor);
+	padding: var(--bh_spr_8) var(--bh_spr_12);
+	border-radius: var(--bh_border_radius_32);
+	margin: 0 auto;
+	width: max-content;
+	margin-top: 24px;
+}
+
+.page-section .pagination,
+.pagination {
+	text-align: center;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--bh_spr_8);
+
+	.pagination-left-icon,
+	.pagination-right-icon {
+		padding-right: 4px;
+	}
+
+	a,
+	a:visited,
+	span.current {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 8px 7px;
+		margin: 0;
+		box-sizing: border-box;
+		line-height: 1.2;
+		 
+		text-decoration: none;
+		color: var(--bh_pagination_color);
+		position: relative;
+		overflow: hidden;
+		min-width: 25px;
+		height: 25px;
+		text-align: center;
+		font-size: 14px;
+
+		@include font(wsans, med);
+		border-radius: 100px;
+	}
+
+	a,
+	a:visited {
+
+		span {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		@media (hover: hover) {
+
+			&:hover {
+				color: var(--bh_pagination_color_hover);
+				background-color: var(--bh_pagination_bgcolor_hover);
+			}
+		}
+	}
+
+	span.page-count {
+		padding: var(--bh_spr_6) var(--bh_spr_10) var(--bh_spr_6);
+	}
+
+	span:nth-child(1) {
+		top: 0;
+		position: relative;
+	}
+
+	span.current {
+		background-color: var(--bh_pagination_bgcolor_current);
+		border-radius: 50%;
+		color: var(--bh_pagination_color_current);
+
+		@media (hover: hover) {
+
+			&:hover {
+				background-color: var(--bh_pagination_bgcolor_current);
+				color: var(--bh_pagination_color_current);
+			}
+		}
+	}
+
+	> span.current {
+		border: none;
+
+		@media (hover: hover) {
+
+			&:hover {
+				background-color: var(--bh_pagination_bgcolor_current);
+				color: var(--bh_pagination_first_color);
+			}
+		}
+	}
+}
+
+.pagination-numbers {
+	gap: 8px;
+}
+
+.pagination-dots {
+	line-height: 1;
+}
+
+.pagination-btn-text {
+	display: none;
+}
+
+.pagination {
+
+	span.pre-page,
+	span.next-page,
+	a.pre-page,
+	a.next-page {
+		padding: 0;
+		width: 25px;
+		height: 25px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100px;
+
+		@media (hover: hover) {
+
+			&:hover {
+				color: var(--bh_pagination_color_hover);
+				background-color: var(--bh_pagination_bgcolor_hover);
+
+				svg path {
+					stroke: var(--bh_white);
+				}
+			}
+		}
+	}
+}
+
+
+@include responsive("small") {
+
+	.pagination-list {
+		width: 100%;
+		border-radius: var(--bh_border_radius_32);
+		padding-inline: 30px;
+		box-sizing: border-box;
+	}
+
+	.pagination {
+		width: 100%;
+		justify-content: space-between !important;
+		gap: 0;
+
+		.pagination-numbers {
+			display: none;
+		}
+
+		.pre-page,
+		.next-page {
+			width: 50%;
+			justify-content: center;
+			align-items: center;
+			gap: 6px;
+			padding: 8px 0;
+		}
+
+		.pagination-btn-text {
+			display: inline;
+			font-size: 14px;
+
+			@include font(wsans, med);
+		}
+
+		span.pre-page,
+		span.next-page,
+		a.pre-page,
+		a.next-page {
+			justify-content: space-around;
+			width: auto;
+			height: auto;
+		}
+	}
+}

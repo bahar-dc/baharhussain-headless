@@ -1,0 +1,249 @@
+
+
+.engagement-item {
+	border-radius: 16px;
+
+	.engagement-child-content-group {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		width: 100%;
+
+		.engagement-child-content-group-heading {
+			font-size: 14px;
+			color: var(--bh_engagement__title_color);
+
+			@include font(wsans, sbold);
+			margin-top: 0;
+			line-height: var(--bh_lh_140);
+			 
+			margin-bottom: 6px;
+		}
+
+		p {
+			color: var(--bh_engagement_paragraph_color);
+			font-size: 12px;
+			line-height: 1.4;
+			 
+			margin: 0;
+			max-width: 97%;
+		}
+	}
+}
+
+.engagement-section {
+
+	.components-button {
+		margin-top: 1.5rem;
+	}
+}
+
+.engagement-section-head-container {
+
+	.wp-block-heading {
+		max-width: 100%;
+		line-height: 1.1;
+		 
+		font-size: var(--bh_fs_40_24);
+
+		@include font(wsans, sbold);
+		margin-bottom: 8px;
+	}
+
+	p {
+		margin: auto;
+		font-size: var(--bh_fs_18);
+		line-height: var(--bh_lh_140);
+		 
+		color: var(--bh_engagement_head_paragraph_color);
+	}
+}
+
+.engagement-content-ctn {
+	border-radius: var(--bh_border_radius_24);
+	background-color: var(--bh_engagement_bgcolor);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: var(--bh_spr_40_32);
+
+	.engagement-content-ctn-left {
+		padding: var(--bh_spr_40_16);
+		width: 47.762%;
+		text-align: left;
+
+		.engagement-title {
+			font-size: 14px;
+			line-height: 1.4;
+			 
+			color: var(--bh_engagement__title_color);
+			max-width: 95%;
+		}
+
+		.wp-block-buttons {
+			margin-top: var(--bh_spr_40);
+		}
+	}
+
+	.engagement-content-ctn-right {
+		width: 49.112%;
+
+		.wp-block-image {
+
+			img {
+				aspect-ratio: 555/544;
+				width: 100%;
+				border-radius: 24px;
+			}
+
+			.components-placeholder {
+				border-radius: 24px;
+				aspect-ratio: 555/544;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.engagement-content {
+	margin-top: 24px;
+	margin-bottom: 0;
+	padding-right: 24px;
+
+	.engagement-item {
+		margin-bottom: 6px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.engagement-item {
+	margin-block-start: 0 !important;
+}
+
+.engagement-child-content-group-ctn {
+	display: flex;
+	gap: 8px;
+	border-radius: var(--bh_border_radius_16);
+	align-items: flex-start;
+	justify-content: flex-start;
+	max-height: max-content;
+	padding: var(--bh_spr_16_8);
+	background-color: var(--bh_child_content_bgcolor);
+
+	.wp-block-image {
+		width: 16px;
+		height: 16px;
+
+		.components-placeholder {
+			width: 16px;
+			height: 16px;
+			min-height: 16px !important;
+			overflow: hidden;
+			padding: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	p {
+		color: var(--bh_fan_text_color);
+		font-size: 12px;
+		line-height: 1.4;
+		 
+		margin: 0;
+	}
+}
+
+@include responsive("mid-small") {
+
+	.engagement-section-head {
+
+		.engagement-section-head-heading {
+
+			br {
+				display: none;
+			}
+			max-width: 100%;
+		}
+
+		.engagement-section-head-paragraph {
+			max-width: 100%;
+		}
+	}
+}
+
+@include responsive("small") {
+
+	.engagement-item .engagement-child-content-group p {
+
+		br {
+			display: none;
+		}
+	}
+
+	.engagement-content-ctn-left {
+
+		.wp-block-buttons {
+			padding-bottom: 16px;
+
+			.wp-block-button {
+				width: 100%;
+			}
+		}
+	}
+
+	.engagement-section-head-container .wp-block-heading {
+		max-width: 57%;
+		margin-inline: auto;
+	}
+
+	.engagement-content-ctn .engagement-content-ctn-right .wp-block-image img {
+		max-height: 195px;
+		object-fit: cover;
+		border-radius: 16px;
+	}
+
+	.engagement-child-content-group-ctn {
+		border-radius: 8px;
+	}
+
+	.engagement-content-ctn .engagement-content-ctn-right {
+		padding-bottom: 0;
+	}
+
+	.engagement-content-ctn {
+		border-radius: 16px;
+		flex-direction: column-reverse;
+
+		.engagement-content-ctn-left {
+			width: 100%;
+		}
+
+		.engagement-content-ctn-right {
+			width: 100%;
+		}
+	}
+}
+
+.engagement-child-content-inner {
+	width: 100%;
+	padding-left: 24px;
+	background-repeat: no-repeat;
+	background-size: 18px;
+	background-position: top 0 left;
+
+	.engagement-child-content-heading {
+		font-size: 14px;
+		margin-bottom: 6px;
+
+		@include font(switzer, bold);
+		line-height: 1.6;
+	}
+}

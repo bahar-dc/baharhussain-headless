@@ -1,0 +1,70 @@
+
+@use "./_tools" as *;
+@import "./posts-archive-search";
+
+.categories-left-column {
+
+	h2 {
+		text-transform: uppercase;
+	}
+}
+
+.post-archive-left {
+
+	.two-columns {
+		row-gap: 20px;
+		column-gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+
+		.post-card {
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	#latest-articles-posts:not(:has(.post-card)) {
+		display: block !important;
+	}
+
+	#authors-posts:not(:has(.post-card-author)) {
+		display: block !important;
+	}
+}
+
+
+.archive-page-posts {
+
+	.post-card-excerpt {
+		-webkit-line-clamp: 1;
+	}
+}
+
+@include responsive("small") {
+
+	.categories-left-column {
+		margin-bottom: 20px;
+
+		h1.post-list-section-heading {
+			font-size: 24px;
+			margin-bottom: 6px;
+		}
+	}
+
+	.post-archive-left .two-columns {
+		row-gap: 8px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.post-card-tags {
+		height: 27px;
+		overflow: hidden;
+	}
+
+
+	.post-cards-horizontal {
+
+		.post-card .post-card-title {
+			margin-bottom: 8px;
+		}
+	}
+}

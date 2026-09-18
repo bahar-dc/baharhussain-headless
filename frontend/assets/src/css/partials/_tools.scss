@@ -1,0 +1,8 @@
+// Single import point for any partial or block that needs mixins + font helpers.
+// Usage: @use "path/to/partials/tools" as *;
+@forward "mixins/mixins";
+// Hide module-internal variables — they're used only within _fonts.scss itself.
+// Callers only need the mixins (font, track-fonts, import-fonts, font-face) and
+// functions (font-source, map-deep-get, contains). Hiding prevents "$base-url"
+// conflicts when entry files still @import fonts via the legacy pipeline.
+@forward "fonts/fonts" hide $base-url, $used-fonts, $base-font-stack;
