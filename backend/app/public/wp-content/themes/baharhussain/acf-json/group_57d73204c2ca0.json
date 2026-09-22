@@ -193,6 +193,26 @@
             "selected": 0
         },
         {
+            "key": "field_headless_footer_logo_text",
+            "label": "Footer Logo Text",
+            "name": "ths_var_footer_logo_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Text displayed below the footer logo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_headless_footer_email",
             "label": "Email",
             "name": "ths_var_footer_email",
@@ -261,6 +281,80 @@
             "default_value": "",
             "placeholder": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_headless_footer_cta_heading",
+            "label": "Heading",
+            "name": "ths_var_footer_cta_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Heading displayed in the footer call to action.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_headless_footer_cta_text",
+            "label": "Text",
+            "name": "ths_var_footer_cta_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Text displayed below the footer call-to-action heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_headless_footer_cta_link",
+            "label": "Link",
+            "name": "ths_var_footer_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Primary footer call-to-action link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_headless_footer_meeting_link",
+            "label": "Meeting Link",
+            "name": "ths_var_footer_meeting_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Meeting booking link displayed below the primary link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_5ef5926277321",
