@@ -705,6 +705,8 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
+    "show_in_graphql": 1,
+    "graphql_field_name": "baharHussainTheme",
     "show_in_rest": 0,
     "display_title": "",
     "modified": 177556418
