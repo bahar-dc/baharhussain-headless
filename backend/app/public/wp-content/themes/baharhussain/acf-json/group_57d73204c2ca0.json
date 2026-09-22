@@ -22,28 +22,11 @@
         },
         {
             "key": "field_5ed4cfcc4548c",
-            "label": "Button #1",
+            "label": "Primary Header Button",
             "name": "ths_var_tohdr_btn",
             "aria-label": "",
             "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 1
-        },
-        {
-            "key": "field_69ad2c506fbd0",
-            "label": "Button #2",
-            "name": "ths_var_tohdr_btn_two",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
+            "instructions": "Set the header button label, URL, and target.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -210,319 +193,74 @@
             "selected": 0
         },
         {
-            "key": "field_62669b7be5b29",
-            "label": "Text",
-            "name": "ths_var_ftrop_text",
+            "key": "field_headless_footer_email",
+            "label": "Email",
+            "name": "ths_var_footer_email",
             "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
+            "type": "email",
+            "instructions": "Footer contact email address.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0,
-            "wysiwyg_height": ""
+            "placeholder": ""
         },
         {
-            "key": "field_6231ae11e61b4",
-            "label": "Title",
-            "name": "ths_var_ftrop_title",
+            "key": "field_headless_footer_location",
+            "label": "Location",
+            "name": "ths_var_footer_location",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Footer location text.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
             "maxlength": ""
         },
         {
-            "key": "field_6231add3e61b3",
-            "label": "For allocation of menus , please go to Appearance -> Menus -> Manage Locations",
-            "name": "",
+            "key": "field_headless_footer_linkedin",
+            "label": "LinkedIn",
+            "name": "ths_var_footer_linkedin",
             "aria-label": "",
-            "type": "message",
-            "instructions": "",
+            "type": "url",
+            "instructions": "Footer LinkedIn profile URL.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "default_value": "",
+            "placeholder": ""
         },
         {
-            "key": "field_62683b44efa45",
-            "label": "Copyright",
-            "name": "ths_var_ftrop_copyright",
+            "key": "field_headless_footer_phone",
+            "label": "Phone",
+            "name": "ths_var_footer_phone",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Footer phone number.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_6597e85bfce78",
-            "label": "Social Profiles",
-            "name": "ths_var_social_profiles",
-            "aria-label": "",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layouts": {
-                "layout_6597e861f0f4d": {
-                    "key": "layout_6597e861f0f4d",
-                    "name": "facebook",
-                    "label": "Facebook",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e891a58e6",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e8a1a58e7": {
-                    "key": "layout_6597e8a1a58e7",
-                    "name": "twitter",
-                    "label": "Twitter",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e8a1a58e8",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e8c4a58e9": {
-                    "key": "layout_6597e8c4a58e9",
-                    "name": "linkedin",
-                    "label": "LinkedIn",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e8c4a58ea",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e8d0a58eb": {
-                    "key": "layout_6597e8d0a58eb",
-                    "name": "instagram",
-                    "label": "Instagram",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e8fba58ee",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e8e1a58ed": {
-                    "key": "layout_6597e8e1a58ed",
-                    "name": "youtube",
-                    "label": "Youtube",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e90ba58ef",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e9339e149": {
-                    "key": "layout_6597e9339e149",
-                    "name": "pinterest",
-                    "label": "Pinterest",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e9339e14a",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597e99e71795": {
-                    "key": "layout_6597e99e71795",
-                    "name": "vimeo",
-                    "label": "Vimeo",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597e99e71796",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                },
-                "layout_6597f0d6aa03f": {
-                    "key": "layout_6597f0d6aa03f",
-                    "name": "tiktok",
-                    "label": "Tiktok",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6597f0d6aa040",
-                            "label": "Social Link",
-                            "name": "social_link",
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "1"
-                }
-            },
-            "min": "",
-            "max": "",
-            "button_label": "Add Row"
         },
         {
             "key": "field_5ef5926277321",
@@ -686,7 +424,7 @@
             "name": "head_scripts",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Scripts will be placed within the HEAD tag. Please place code inside script tags <script><\/script>.\r\n<br\/> For example <b>Google Tag Manger <\/b> head tag code.",
+            "instructions": "Scripts will be placed within the HEAD tag. Please place code inside script tags <script></script>.\r\n<br/> For example <b>Google Tag Manger </b> head tag code.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -706,7 +444,7 @@
             "name": "body_scripts",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Scripts will be placed after the starting BODY tag. Please place code inside script tags <script><\/script>.\r\n<br\/> For example <b>Google Tag Manger <\/b> body tag code.",
+            "instructions": "Scripts will be placed after the starting BODY tag. Please place code inside script tags <script></script>.\r\n<br/> For example <b>Google Tag Manger </b> body tag code.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -726,7 +464,7 @@
             "name": "custom_scripts",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Paste your tracking codes here. This will be added within HEAD tag. Please place code inside script tags <script><\/script>.\r\n<br\/> For example any third party tracking codes.",
+            "instructions": "Paste your tracking codes here. This will be added within HEAD tag. Please place code inside script tags <script></script>.\r\n<br/> For example any third party tracking codes.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -746,7 +484,7 @@
             "name": "footer_scripts",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Scripts will be placed just before the ending FOOTER tag. Please place code inside script tags <script><\/script>.",
+            "instructions": "Scripts will be placed just before the ending FOOTER tag. Please place code inside script tags <script></script>.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -766,7 +504,7 @@
             "name": "custom_css",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "Paste your Custom CSS code here. Any custom CSS entered here will override the theme CSS. In some cases, the <b>!important<\/b> property may be needed.",
+            "instructions": "Paste your Custom CSS code here. Any custom CSS entered here will override the theme CSS. In some cases, the <b>!important</b> property may be needed.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
