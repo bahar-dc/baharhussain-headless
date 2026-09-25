@@ -1,7 +1,12 @@
+@use "../../css/partials/tools" as *;
+
+// Home Hero styles moved from the global homepage partial.
+:global {
 .home-hero {
 	position: relative;
 	overflow: hidden;
 	background: var(--bh_hero_background);
+	@include transition(all, 0.15s, ease-in-out);
 }
 
 .home-hero__grid {
@@ -305,4 +310,6 @@
 		width: auto;
 		padding: var(--bh_spr_16);
 	}
+}
+
 }

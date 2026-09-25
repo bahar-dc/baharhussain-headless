@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ths/home-hero",
+	"version": "1.0.0",
+	"title": "Home Hero",
+	"category": "ths-home",
+	"icon": "cover-image",
+	"description": "Homepage hero section.",
+	"supports": {
+		"html": false,
+		"align": ["wide"]
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "WordPress Development" },
+		"title": { "type": "string", "default": "Custom WordPress Development for Agencies" },
+		"description": { "type": "string", "default": "Reliable WordPress development, custom Gutenberg blocks, and technical support for agencies and their clients." },
+		"imageUrl": { "type": "string", "default": "" },
+		"imageAlt": { "type": "string", "default": "" },
+		"primaryLabel": { "type": "string", "default": "Start a Project" },
+		"primaryUrl": { "type": "string", "default": "/contact/" },
+		"secondaryLabel": { "type": "string", "default": "View Services" },
+		"secondaryUrl": { "type": "string", "default": "/services/" }
+	},
+	"textdomain": "baharhussain",
+	"editorScript": "file:./index.js",
+	"style": "file:./home-hero.css",
+	"editorStyle": "file:./home-hero.css"
+}

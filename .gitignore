@@ -1,5 +1,9 @@
 # Keep only the WordPress theme from the backend.
 /*
+!/package.json
+!/webpack.config.js
+!/scripts/
+!/scripts/**
 !/backend/
 !/backend/app/
 /backend/app/*
